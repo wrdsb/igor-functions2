@@ -12,7 +12,7 @@ module.exports = function (context, data, igorRecord) {
 
         var central = igorRecord.central;
         Object.getOwnPropertyNames(central).forEach(function (override) {
-            var item = central.override;
+            var item = central[override];
             var membership = {
                 email: item.email,
                 role: item.role,
