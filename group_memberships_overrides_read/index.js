@@ -1,5 +1,6 @@
 module.exports = function (context, data, igorRecord) {
     var group = data.group;
+    var memberships_array = [];
 
     if (!igorRecord)
     {
@@ -8,74 +9,23 @@ module.exports = function (context, data, igorRecord) {
     else
     {
         context.log(igorRecord);
-    }
 
-    var memberships_array = [
-        {
-            email: "email_address1@wrdsb.ca",
-            role: "MANAGER",
-            status: "ACTIVE",
-            source: "central"
-        },
-        {
-            email: "email_address2@wrdsb.ca",
-            role: "MANAGER",
-            status: "ACTIVE",
-            source: "central"
-        },
-        {
-            email: "email_address3@wrdsb.ca",
-            role: "MEMBER",
-            status: "ACTIVE",
-            source: "central"
-        },
-        {
-            email: "email_address4@wrdsb.ca",
-            role: "MEMBER",
-            status: "ACTIVE",
-            source: "central"
-        },
-        {
-            email: "email_address5@wrdsb.ca",
-            role: "MANAGER",
-            status: "ACTIVE",
-            source: "central"
-        },
-        {
-            email: "email_address6@wrdsb.ca",
-            role: "MANAGER",
-            status: "ACTIVE",
-            source: "central"
-        },
-        {
-            email: "email_address7@wrdsb.ca",
-            role: "MANAGER",
-            status: "ACTIVE",
-            source: "central"
-        },
-        {
-            email: "email_address8@wrdsb.ca",
-            role: "MANAGER",
-            status: "ACTIVE",
-            source: "central"
-        },
-        {
-            email: "email_address9@wrdsb.ca",
-            role: "MANAGER",
-            status: "ACTIVE",
-            source: "central"
-        },
-        {
-            email: "email_address10@wrdsb.ca",
-            role: "MANAGER",
-            status: "ACTIVE",
-            source: "central"
-        }
-    ];
+        var central = igorRecord.central;
+        Object.getOwnPropertyNames(central).forEach(function (override) {
+            var item = central.override;
+            var membership = {
+                email: item.email,
+                role: item.role,
+                status: item.status,
+                source: "central"
+            };
+            memberships_array.push(membership);
+        });
+    }
 
     context.res = {
         status: 200,
-        body: igorRecord
+        body: memberships_array
     };
 
     context.done(null, `Listed membership overrides for group ${group}`);
