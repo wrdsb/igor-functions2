@@ -5,8 +5,17 @@
             "type": "httpTrigger",
             "authLevel": "function",
             "methods": [
-                "get"
+                "post"
             ],
+            "direction": "in"
+        },
+        {
+            "name": "igorRecord",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-overrides",
+            "Id": "{group}",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
             "direction": "in"
         },
         {
@@ -16,3 +25,24 @@
         }
     ]
 }
+
+{
+    "bindings": [
+      {
+        "authLevel": "anonymous",
+        "name": "req",
+        "type": "httpTrigger",
+        "direction": "in",
+        "methods": [
+          "get",
+          "post"
+        ]
+      },
+      {
+        "name": "$return",
+        "type": "http",
+        "direction": "out"
+      },
+    ],
+    "disabled": false
+  }

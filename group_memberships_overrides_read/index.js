@@ -1,4 +1,15 @@
-module.exports = function (context, data) {
+module.exports = function (context, data, igorRecord) {
+    var group = data.group;
+
+    if (!igorRecord)
+    {
+        context.log("Record not found");
+    }
+    else
+    {
+        context.log(igorRecord);
+    }
+
     var memberships_array = [
         {
             email: "email_address1@wrdsb.ca",
@@ -64,8 +75,8 @@ module.exports = function (context, data) {
 
     context.res = {
         status: 200,
-        body: memberships_array
+        body: igorRecord
     };
 
-    context.done(null, 'Listed membership overrides for group abe-its@wrdsb.ca');
+    context.done(null, `Listed membership overrides for group ${group}`);
 };
