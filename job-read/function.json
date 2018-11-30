@@ -13,8 +13,8 @@
             "name": "job",
             "type": "table",
             "tableName": "activeJobs",
-            "partitionKey": "{Query.job_type}",
-            "rowKey": "{Query.job_number}",
+            "partitionKey": "{function}",
+            "rowKey": "{id}",
             "connection": "wrdsbigor_STORAGE",
             "direction": "in"
         },
@@ -23,6 +23,5 @@
             "type": "http",
             "direction": "out"
         }
-    ],
-    "disabled": false
-}
+    ]
+  }

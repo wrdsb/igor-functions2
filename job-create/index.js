@@ -35,8 +35,8 @@ module.exports = function (context, req) {
     };
 
     // ... add table keys ...
-    job.PartitionKey = job.id;
-    job.RowKey = job.job_number;
+    job.PartitionKey = job.function;
+    job.RowKey = job.id;
 
     // ... add callback property, if provided ...
     if (job_request.callback) {
