@@ -3,15 +3,18 @@
         {
             "name": "req",
             "type": "httpTrigger",
-            "webHookType": "genericJson",
+            "authLevel": "function",
+            "methods": [
+                "post"
+            ],
             "direction": "in"
         },
         {
             "name": "job",
             "type": "table",
             "tableName": "activeJobs",
-            "partitionKey": "{job_type}",
-            "rowKey": "{job_number}",
+            "partitionKey": "{Query.job_type}",
+            "rowKey": "{Query.job_number}",
             "connection": "wrdsbigor_STORAGE",
             "direction": "in"
         },
