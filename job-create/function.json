@@ -1,0 +1,14 @@
+{
+    "bindings": [
+        {
+            "name": "req",
+            "type": "httpTrigger",
+            "authLevel": "function",
+            "methods": [
+                "post"
+            ],
+            "direction": "in"
+        }
+    ],
+    "disabled": false
+}
