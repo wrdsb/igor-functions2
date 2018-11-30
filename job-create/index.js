@@ -87,7 +87,7 @@ module.exports = function (context, req) {
         function(job, callback) {
             // Base64 encode message to keep queue happy
             var queue_message = Buffer.from(job.job_number).toString('base64');
-            queueService.createMessage(job.service, queue_message, function(error) {
+            queueService.createMessage(job.function, queue_message, function(error) {
                 if (error) {
                     callback(error);
                 } else {
