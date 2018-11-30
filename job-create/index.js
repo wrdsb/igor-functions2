@@ -72,7 +72,7 @@ module.exports = function (context, req) {
         // Add queue message to trigger job dispatcher
         function(job, callback) {
             // Base64 encode message to keep queue happy
-            var queue_message = Buffer.from(job.job_number).toString('base64');
+            var queue_message = Buffer.from(job.id).toString('base64');
             queueService.createMessage(job.function, queue_message, function(error) {
                 if (error) {
                     callback(error);
