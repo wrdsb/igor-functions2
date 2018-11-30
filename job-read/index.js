@@ -6,5 +6,6 @@ module.exports = function (context, data) {
         body: job
     };
 
+    context.log(JSON.stringify(job));
     context.done(null, job);
 };
