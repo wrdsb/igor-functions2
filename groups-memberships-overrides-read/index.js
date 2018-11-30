@@ -1,6 +1,6 @@
 module.exports = function (context, data, igorRecord) {
     var group = data.group;
-    var memberships_array = [];
+    var memberships = [];
 
     if (!igorRecord)
     {
@@ -11,21 +11,21 @@ module.exports = function (context, data, igorRecord) {
         context.log(igorRecord);
 
         var central = igorRecord.central;
-        Object.getOwnPropertyNames(central).forEach(function (override) {
-            var item = central[override];
+        Object.getOwnPropertyNames(central).forEach(function (override_name) {
+            var override = central[override_name];
             var membership = {
-                email: item.email,
-                role: item.role,
-                status: item.status,
+                email: override.email,
+                role: override.role,
+                status: override.status,
                 source: "central"
             };
-            memberships_array.push(membership);
+            memberships.push(membership);
         });
     }
 
     context.res = {
         status: 200,
-        body: memberships_array
+        body: memberships
     };
 
     context.done(null, `Listed membership overrides for group ${group}`);
