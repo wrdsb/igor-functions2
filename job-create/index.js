@@ -10,13 +10,8 @@ module.exports = function (context, req) {
 
     // TODO: Better handling of malformed requests
 
-    // Validate request object
-    if (!job_request.service) {
-        context.done('A Service is required.');
-        return;
-    }
-    if (!job_request.function && !job_request.logic_app) {
-        context.done('Either a Function or Logic App is required.');
+    if (!job_request.function) {
+        context.done('A function is required.');
         return;
     }
     if (!job_request.payload) {
@@ -26,10 +21,10 @@ module.exports = function (context, req) {
 
     // Create Job object ...
     var job = {
-        job_number: context.executionContext.invocationId,
-        status: "created",
-        service: job_request.service,
+        id: context.executionContext.invocationId,
+        function: job_request.function,
         payload: JSON.stringify(job_request.payload),
+        status: "created",
         total_attempts: 0,
         max_attempts: 0,
         first_attempt_at: null,
@@ -39,18 +34,9 @@ module.exports = function (context, req) {
         updated_at: timestamp
     };
 
-    // ... add job_type and either function or logic_app ...
-    if (job_request.function) {
-        job.job_type = job_request.service + ':' + job_request.function;
-        job.function = job_request.function;
-    } else if (job_request.logic_app){
-        job.job_type = job_request.service + ':' + job_request.logic_app;
-        job.logic_app = job_request.logic_app;
-    }
-
     // ... add table keys ...
-    job.PartitionKey = job.job_number;
-    job.RowKey = 'job';
+    job.PartitionKey = job.id;
+    job.RowKey = job.job_number;
 
     // ... add callback property, if provided ...
     if (job_request.callback) {
