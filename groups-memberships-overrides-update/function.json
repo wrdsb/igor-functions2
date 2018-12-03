@@ -1,0 +1,51 @@
+{
+    "bindings": [
+        {
+            "name": "req",
+            "type": "httpTrigger",
+            "authLevel": "function",
+            "methods": [
+                "post"
+            ],
+            "direction": "in"
+        },
+        {
+            "name": "igorRecordIn",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-overrides",
+            "Id": "{group}",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "igorRecordOut",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-overrides",
+            "createIfNotExists": true,
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "out"
+        },
+        {
+            "name": "res",
+            "type": "http",
+            "direction": "out"
+        }
+    ]
+}
+
+
+{
+    "group": "somegroup@wrdsb.ca",
+    "scope": "central",
+    "operation": "",
+    "membership": {
+
+    }
+}
+
+add
+update
+delete
+
