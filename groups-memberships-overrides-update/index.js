@@ -1,12 +1,13 @@
 module.exports = function (context, data) {
     var execution_timestamp = (new Date()).toJSON();  // format: 2012-04-23T18:25:43.511Z
+    context.log(data);
 
-    var igorRecord = igorRecordIn;
+    var igorRecord = context.bindings.igorRecordIn;
 
-    var group = data.group;
-    var scope = data.scope;
-    var operation = operation;
-    var membership = membership;
+    var group = data.body.group;
+    var scope = data.body.scope;
+    var operation = data.body.operation;
+    var membership = data.body.membership;
     var user = membership.email;
 
     if (!igorRecord) {
