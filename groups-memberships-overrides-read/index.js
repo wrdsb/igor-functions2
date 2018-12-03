@@ -1,4 +1,6 @@
 module.exports = function (context, data, igorRecord) {
+    var execution_timestamp = (new Date()).toJSON();  // format: 2012-04-23T18:25:43.511Z
+
     var group = data.group;
     var memberships = [];
 
