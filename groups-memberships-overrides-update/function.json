@@ -34,18 +34,3 @@
         }
     ]
 }
-
-
-{
-    "group": "somegroup@wrdsb.ca",
-    "scope": "central",
-    "operation": "",
-    "membership": {
-
-    }
-}
-
-add
-update
-delete
-
