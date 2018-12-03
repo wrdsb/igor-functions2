@@ -1,6 +1,5 @@
 module.exports = function (context, data) {
     var execution_timestamp = (new Date()).toJSON();  // format: 2012-04-23T18:25:43.511Z
-    context.log(data);
 
     var igorRecord = context.bindings.igorRecordIn;
 
@@ -25,10 +24,11 @@ module.exports = function (context, data) {
     switch (operation) {
         case 'add':
             igorRecord[scope][user] = membership;
+
             igorRecord[scope][user].created_at = execution_timestamp;
+            igorRecord[scope][user].fetched_at = '';
             igorRecord[scope][user].updated_at = '';
             igorRecord[scope][user].deleted_at = '';
-            igorRecord[scope][user].fetched_at = '';
             igorRecord[scope][user].deleted = false;
             break;
 
@@ -38,12 +38,15 @@ module.exports = function (context, data) {
             igorRecord[scope][user].role = membership.role;
             igorRecord[scope][user].status = membership.status;
             igorRecord[scope][user].type = membership.type;
+
             igorRecord[scope][user].updated_at = execution_timestamp;
+            igorRecord[scope][user].deleted_at = '';
+            igorRecord[scope][user].deleted = false;
             break;
 
         case 'delete':
-            igorRecord[scope][user].deleted = true;
             igorRecord[scope][user].deleted_at = execution_timestamp;
+            igorRecord[scope][user].deleted = true;
             break;
 
         default:
