@@ -29,19 +29,16 @@ module.exports = async function (context) {
     var staff_blob_results = await parseStaffMembers(staff_members);
     var public_blob_results = await parsePublicMembers(public_members);
 
-    var response = [];
+    var response = {};
+    response.count = 0;
     
     staff_blob_results.forEach(function(blob) {
-        response.push({
-            blob: blob.name,
-            size: blob.totalSize
-        });
+        response[blob.name] = blob.totalSize;
+        response.count++;
     });
     public_blob_results.forEach(function(blob) {
-        response.push({
-            blob: blob.name,
-            size: blob.totalSize
-        });
+        response[blob.name] = blob.totalSize;
+        response.count++;
     });
 
     return {

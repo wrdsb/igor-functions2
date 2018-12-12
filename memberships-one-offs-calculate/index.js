@@ -46,13 +46,12 @@ module.exports = async function (context) {
     var calculated_members = await calculateMembers(rows);
     var blob_results = await parseMembers(calculated_members);
 
-    var response = [];
+    var response = {};
+    response.count = 0;
     
     blob_results.forEach(function(blob) {
-        response.push({
-            blob: blob.name,
-            size: blob.totalSize
-        });
+        response[blob.name] = blob.totalSize;
+        response.count++;
     });
 
     return {
