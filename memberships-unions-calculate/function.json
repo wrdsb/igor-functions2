@@ -17,6 +17,146 @@
             "direction": "in"
         },
         {
+            "name": "cama_group_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "cama_group_codes",
+            "partitionKey": "cama_group_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "dece_group_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "dece_group_codes",
+            "partitionKey": "dece_group_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "dece_excluded_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "dece_excluded_job_codes",
+            "partitionKey": "dece_excluded_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "dece_observer_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "dece_observer_job_codes",
+            "partitionKey": "dece_observer_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "eaa_group_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "eaa_group_codes",
+            "partitionKey": "eaa_group_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "eaa_excluded_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "eaa_excluded_job_codes",
+            "partitionKey": "eaa_excluded_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "ess_group_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "ess_group_codes",
+            "partitionKey": "ess_group_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "etfo_group_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "etfo_group_codes",
+            "partitionKey": "etfo_group_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "osstf_contract_group_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "osstf_contract_group_codes",
+            "partitionKey": "osstf_contract_group_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "osstf_ot_group_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "osstf_ot_group_codes",
+            "partitionKey": "osstf_ot_group_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "pssp_group_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "pssp_group_codes",
+            "partitionKey": "pssp_group_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "smaca_group_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "smaca_group_codes",
+            "partitionKey": "smaca_group_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "smaca_elementary_group_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "smaca_elementary_group_codes",
+            "partitionKey": "smaca_elementary_group_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "smaca_secondary_group_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "smaca_secondary_group_codes",
+            "partitionKey": "smaca_secondary_group_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
             "name": "$return",
             "type": "http",
             "direction": "out"

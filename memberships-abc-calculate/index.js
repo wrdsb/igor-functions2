@@ -12,15 +12,15 @@ module.exports = async function (context) {
         process.env['wrdsbigor_STORAGE_KEY']
     );
 
-    var admin_job_codes = ['5130', '5130SEP', '5130SEPU', '5130TEP', '5131', '5131SEVP', '5131TEVP', '5230', '5230SSP', '5230TSP', '5231', '5231SSVP', '5231SSVU', '5231TSVP'];
-    var attendance_job_codes = ['5130', '5130SEP', '5130SEPU', '5130TEP', '5131', '5131SEVP', '5131TEVP', '5107ADSL', '5230', '5230SSP', '5230TSP', '5231', '5231SAL', '5231SSVP', '5231T', '5231TSAL', '5231TSVP', '1337', '1339', '1340', '1341', '1345', '1350', '1352', '1443', '1482', '1506', '1511', '1514', '1533', '1537', '1571', '1600', '6123LTHR'];
-    var beforeafter_job_codes = ['1340', '5154', '5171', '5151', '5155', '5172', '5159', '5131TEVP', '5111', '7600ST', '5157', '5127', '5152', '5144', '5161', '5100DSL', '5198', '5100', '5130TEP', '5130', '7600SA', '5107ADSL', '5156', '5131', '5456', '5356', '8128SERT', '8128SSE', '8128ESL', '8126SERT', '8126ESL', '8128SE', '8126S', '8126SE', '8126CT', '8124', '8130', '1537', '1500', '1533', '4000', '4011', '4010', '4200', '4210', '4230', '4220', '4101', '6701C', '6701E', '4100', '5131SEVP', '5130SEP', '5130SEPU'];
-    var courier_job_codes = ['5130', '5130SEP', '5130SEPU', '5130TEP', '5131', '5131SEVP', '5131TEVP', '5107ADSL', '5230', '5230SSP', '5230TSP', '5231', '5231SAL', '5231SSVP', '5231T', '5231TSAL', '5231TSVP', '1337', '1339', '1340', '1341', '1345', '1350', '1352', '1443', '1482', '1506', '1511', '1514', '1533', '1537', '1571', '1600', '6503', '6502A', '6502B', '6502C', '6512'];
-    var easyconnect_job_codes = ['1533', '5130', '5130SEP', '5130SEPU', '5130TEP', '5131', '5131SEVP', '5131TEVP', '5230', '5230SSP', '5230TSP', '5231', '5231SSVP', '5231SSVU', '5231TSVP', '1600'];
-    var its_job_codes = ['5130', '5130SEP', '5130SEPU', '5130TEP', '5131', '5131SEVP', '5131TEVP', '5230', '5230SSP', '5230TSP', '5231', '5231SSVP', '5231SSVU', '5231TSVP','1533','1600','1542','1350','6132LTHR'];
-    var office_job_codes = ['5130', '5130SEP', '5130SEPU', '5130TEP', '5131', '5131SEVP', '5131TEVP', '5107ADSL', '5230', '5230SSP', '5230TSP', '5231', '5231SAL', '5231SSVP', '5231T', '5231TSAL', '5231TSVP', '1337', '1339', '1340', '1341', '1345', '1350', '1352', '1443', '1482', '1506', '1511', '1514', '1533', '1537', '1571', '1600','6123LTHR'];
-    var orders_job_codes = ['5130', '5130SEP', '5130SEPU', '5130TEP', '5131', '5131SEVP', '5131TEVP', '5107ADSL', '5230', '5230SSP', '5230TSP', '5231', '5231SAL', '5231SSVP', '5231T', '5231TSAL', '5231TSVP', '1337', '1339', '1340', '1341', '1345', '1350', '1352', '1443', '1482', '1506', '1511', '1514', '1533', '1537', '1571', '1600'];
-    var s4s_job_codes = ['5130', '5130SEPU', '5130TEP', '5131', '5131TEVP', '5152', '5221S', '5230', '5230SSP', '5230TSP', '5231', '5231SSVP', '5231SSVU', '5231TSVP', '8126SERT', '8127SERT', '8128SERT'];
+    var admin_job_codes = context.bindings.abc_admin_job_codes.job_codes;
+    var attendance_job_codes = context.bindings.abc_attendance_job_codes.job_codes;
+    var beforeafter_job_codes = context.bindings.abc_beforeafter_job_codes.job_codes;
+    var courier_job_codes = context.bindings.abc_courier_job_codes.job_codes;
+    var easyconnect_job_codes = context.bindings.abc_easyconnect_job_codes.job_codes;
+    var its_job_codes = context.bindings.abc_its_job_codes.job_codes;
+    var office_job_codes = context.bindings.abc_office_job_codes.job_codes;
+    var orders_job_codes = context.bindings.abc_orders_job_codes.job_codes;
+    var s4s_job_codes = context.bindings.abc_s4s_job_codes.job_codes;
 
     var calculated_members = await calculateMembers(rows);
     var staff_members = calculated_members[0];

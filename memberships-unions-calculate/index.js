@@ -12,20 +12,20 @@ module.exports = async function (context) {
         process.env['wrdsbigor_STORAGE_KEY']
     );
 
-    var cama_group_codes = ['6570','6920','6570CMH'];
-    var dece_group_codes = ['ECE','ECELT','ECEOCCL','FLOA-ECE'];
-    var dece_excluded_job_codes = ['6701C', '6701E'];
-    var dece_observer_job_codes = ['4030','2757'];
-    var eaa_group_codes = ['6710','6710TM','6852','6853','6853T','EASUPPLY','FLOA-EAA'];
-    var eaa_excluded_job_codes = ['6700E','6700S'];
-    var ess_group_codes = ['6690','6690THR','6690THRA','6691','6700','6700HSEC','6701'];
-    var etfo_group_codes = ['5100','FLOA-ELM'];
-    var osstf_contract_group_codes = ['5108','FLOA-SEC'];
-    var osstf_ot_group_codes = ['5131S','5132S'];
-    var pssp_group_codes = ['6300','6703COM','6703SPCH','6703SW','6703TEMP','FLOA-PSS'];
-    var smaca_group_codes = ['6550','6854','6854T','CAFASST','CAFSUPPL'];
-    var smaca_elementary_group_codes = ['6550','6854','6854T','CAFASST','CAFSUPPL'];
-    var smaca_secondary_group_codes = ['6550','6854','6854T','CAFASST','CAFSUPPL'];
+    var cama_group_codes = context.bindings.cama_group_codes.group_codes;
+    var dece_group_codes = context.bindings.dece_group_codes.group_codes;
+    var dece_excluded_job_codes = context.bindings.dece_excluded_job_codes.job_codes;
+    var dece_observer_job_codes = context.bindings.dece_observer_job_codes.job_codes;
+    var eaa_group_codes = context.bindings.eaa_group_codes.group_codes;
+    var eaa_excluded_job_codes = context.bindings.eaa_excluded_job_codes.job_codes;
+    var ess_group_codes = context.bindings.ess_group_codes.group_codes;
+    var etfo_group_codes = context.bindings.etfo_group_codes.group_codes;
+    var osstf_contract_group_codes = context.bindings.osstf_contract_group_codes.group_codes;
+    var osstf_ot_group_codes = context.bindings.osstf_ot_group_codes.group_codes;
+    var pssp_group_codes = context.bindings.pssp_group_codes.group_codes;
+    var smaca_group_codes = context.bindings.smaca_group_codes.group_codes;
+    var smaca_elementary_group_codes = context.bindings.smaca_elementary_group_codes.group_codes;
+    var smaca_secondary_group_codes = context.bindings.smaca_secondary_group_codes.group_codes;
 
     var calculated_members = await calculateMembers(rows);
     var blob_results = await parseMembers(calculated_members);

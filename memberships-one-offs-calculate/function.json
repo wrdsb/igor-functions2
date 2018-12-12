@@ -17,6 +17,306 @@
             "direction": "in"
         },
         {
+            "name": "admissions_qna_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "admissions_qna_job_codes",
+            "partitionKey": "admissions_qna_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "dece_staff_group_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "dece_staff_group_codes",
+            "partitionKey": "dece_staff_group_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "ea_staff_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "ea_staff_job_codes",
+            "partitionKey": "ea_staff_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "ed_deployment_manager_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "ed_deployment_manager_job_codes",
+            "partitionKey": "ed_deployment_manager_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "ed_deployment_member_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "ed_deployment_member_job_codes",
+            "partitionKey": "ed_deployment_member_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "ed_inquiries_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "ed_inquiries_job_codes",
+            "partitionKey": "ed_inquiries_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "edc_location_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "edc_location_codes",
+            "partitionKey": "edc_location_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "elementary_serts_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "elementary_serts_job_codes",
+            "partitionKey": "elementary_serts_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "finance_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "finance_job_codes",
+            "partitionKey": "finance_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "finance_location_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "finance_location_codes",
+            "partitionKey": "finance_location_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "grc_health_safety_location_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "grc_health_safety_location_codes",
+            "partitionKey": "grc_health_safety_location_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "itinerant_spec_ed_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "itinerant_spec_ed_job_codes",
+            "partitionKey": "itinerant_spec_ed_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "itinerant_spec_ed_location_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "itinerant_spec_ed_location_codes",
+            "partitionKey": "itinerant_spec_ed_location_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "its_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "its_job_codes",
+            "partitionKey": "its_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "lars_communication_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "lars_communication_job_codes",
+            "partitionKey": "lars_communication_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "procurement_qna_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "procurement_qna_job_codes",
+            "partitionKey": "procurement_qna_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "psychologists_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "psychologists_job_codes",
+            "partitionKey": "psychologists_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "school_day_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "school_day_job_codes",
+            "partitionKey": "school_day_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "secondary_serts_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "secondary_serts_job_codes",
+            "partitionKey": "secondary_serts_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "smaca_elementary_group_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "smaca_elementary_group_codes",
+            "partitionKey": "smaca_elementary_group_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "smaca_secondary_group_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "smaca_secondary_group_codes",
+            "partitionKey": "smaca_secondary_group_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "social_workers_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "social_workers_job_codes",
+            "partitionKey": "social_workers_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "special_education_location_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "special_education_location_codes",
+            "partitionKey": "special_education_location_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "special_education_consultants_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "special_education_consultants_job_codes",
+            "partitionKey": "special_education_consultants_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "speech_language_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "speech_language_job_codes",
+            "partitionKey": "speech_language_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "system_leaders_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "system_leaders_job_codes",
+            "partitionKey": "system_leaders_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "thr_message_board_group_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "thr_message_board_group_codes",
+            "partitionKey": "thr_message_board_group_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "trillium_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "trillium_job_codes",
+            "partitionKey": "trillium_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "twea_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "twea_job_codes",
+            "partitionKey": "twea_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "wrdsb_managers_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "wrdsb_managers_job_codes",
+            "partitionKey": "wrdsb_managers_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
             "name": "$return",
             "type": "http",
             "direction": "out"

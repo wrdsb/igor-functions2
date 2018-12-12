@@ -17,6 +17,126 @@
             "direction": "in"
         },
         {
+            "name": "elementary_admin_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "elementary_admin_job_codes",
+            "partitionKey": "elementary_admin_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "elementary_head_secretaries_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "elementary_head_secretaries_job_codes",
+            "partitionKey": "elementary_head_secretaries_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "elementary_c_secretaries_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "elementary_c_secretaries_job_codes",
+            "partitionKey": "elementary_c_secretaries_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "elementary_ot_teachers_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "elementary_ot_teachers_job_codes",
+            "partitionKey": "elementary_ot_teachers_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "elementary_teachers_group_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "elementary_teachers_group_codes",
+            "partitionKey": "elementary_teachers_group_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "elementary_staffing_support_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "elementary_staffing_support_job_codes",
+            "partitionKey": "elementary_staffing_support_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "secondary_admin_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "secondary_admin_job_codes",
+            "partitionKey": "secondary_admin_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "secondary_office_supervisors_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "secondary_office_supervisors_job_codes",
+            "partitionKey": "secondary_office_supervisors_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "secondary_office_assistants_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "secondary_office_assistants_job_codes",
+            "partitionKey": "secondary_office_assistants_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "secondary_c_secretaries_job_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "secondary_c_secretaries_job_codes",
+            "partitionKey": "secondary_c_secretaries_job_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "secondary_teachers_group_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "secondary_teachers_group_codes",
+            "partitionKey": "secondary_teachers_group_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "secondary_ot_teachers_group_codes",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "secondary_ot_teachers_group_codes",
+            "partitionKey": "secondary_ot_teachers_group_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
             "name": "$return",
             "type": "http",
             "direction": "out"
