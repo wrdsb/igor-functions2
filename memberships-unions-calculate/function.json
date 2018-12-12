@@ -17,7 +17,7 @@
             "direction": "in"
         },
         {
-            "name": "cama_group_codes",
+            "name": "camaGroupCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -27,7 +27,7 @@
             "direction": "in"
         },
         {
-            "name": "dece_group_codes",
+            "name": "deceGroupCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -37,7 +37,7 @@
             "direction": "in"
         },
         {
-            "name": "dece_excluded_job_codes",
+            "name": "deceExcludedJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -47,7 +47,7 @@
             "direction": "in"
         },
         {
-            "name": "dece_observer_job_codes",
+            "name": "deceObserverJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -57,7 +57,7 @@
             "direction": "in"
         },
         {
-            "name": "eaa_group_codes",
+            "name": "eaaGroupCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -67,7 +67,7 @@
             "direction": "in"
         },
         {
-            "name": "eaa_excluded_job_codes",
+            "name": "eaaExcludedJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -77,7 +77,7 @@
             "direction": "in"
         },
         {
-            "name": "ess_group_codes",
+            "name": "essGroupCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -87,7 +87,7 @@
             "direction": "in"
         },
         {
-            "name": "etfo_group_codes",
+            "name": "etfoGroupCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -97,7 +97,7 @@
             "direction": "in"
         },
         {
-            "name": "osstf_contract_group_codes",
+            "name": "osstfContractGroupCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -107,7 +107,7 @@
             "direction": "in"
         },
         {
-            "name": "osstf_ot_group_codes",
+            "name": "osstfOtGroupCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -117,7 +117,7 @@
             "direction": "in"
         },
         {
-            "name": "pssp_group_codes",
+            "name": "psspGroupCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -127,7 +127,7 @@
             "direction": "in"
         },
         {
-            "name": "smaca_group_codes",
+            "name": "smacaGroupCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -137,7 +137,7 @@
             "direction": "in"
         },
         {
-            "name": "smaca_elementary_group_codes",
+            "name": "smacaElementaryGroupCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -147,7 +147,7 @@
             "direction": "in"
         },
         {
-            "name": "smaca_secondary_group_codes",
+            "name": "smacaSecondaryGroupCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",

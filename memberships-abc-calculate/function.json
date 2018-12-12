@@ -17,7 +17,7 @@
             "direction": "in"
         },
         {
-            "name": "abc_admin_job_codes",
+            "name": "abcAdminJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -27,7 +27,7 @@
             "direction": "in"
         },
         {
-            "name": "abc_attendance_job_codes",
+            "name": "abcAttendanceJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -37,7 +37,7 @@
             "direction": "in"
         },
         {
-            "name": "abc_beforeafter_job_codes",
+            "name": "abcBeforeafterJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -47,7 +47,7 @@
             "direction": "in"
         },
         {
-            "name": "abc_courier_job_codes",
+            "name": "abcCourierJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -57,7 +57,7 @@
             "direction": "in"
         },
         {
-            "name": "abc_easyconnect_job_codes",
+            "name": "abcEasyconnectJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -67,7 +67,7 @@
             "direction": "in"
         },
         {
-            "name": "abc_its_job_codes",
+            "name": "abcItsJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -77,7 +77,7 @@
             "direction": "in"
         },
         {
-            "name": "abc_office_job_codes",
+            "name": "abcOfficeJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -87,7 +87,7 @@
             "direction": "in"
         },
         {
-            "name": "abc_orders_job_codes",
+            "name": "abcOrdersJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -97,7 +97,7 @@
             "direction": "in"
         },
         {
-            "name": "abc_s4s_job_codes",
+            "name": "abcS4sJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",

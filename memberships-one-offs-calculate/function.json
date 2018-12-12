@@ -17,7 +17,7 @@
             "direction": "in"
         },
         {
-            "name": "admissions_qna_job_codes",
+            "name": "admissionsQnaJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -27,7 +27,7 @@
             "direction": "in"
         },
         {
-            "name": "dece_staff_group_codes",
+            "name": "deceStaffGroupCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -37,7 +37,7 @@
             "direction": "in"
         },
         {
-            "name": "ea_staff_job_codes",
+            "name": "eaStaffJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -47,7 +47,7 @@
             "direction": "in"
         },
         {
-            "name": "ed_deployment_manager_job_codes",
+            "name": "edDeploymentManagerJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -57,7 +57,7 @@
             "direction": "in"
         },
         {
-            "name": "ed_deployment_member_job_codes",
+            "name": "edDeploymentMemberJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -67,7 +67,7 @@
             "direction": "in"
         },
         {
-            "name": "ed_inquiries_job_codes",
+            "name": "edInquiriesJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -77,7 +77,7 @@
             "direction": "in"
         },
         {
-            "name": "edc_location_codes",
+            "name": "edcLocationCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -87,7 +87,7 @@
             "direction": "in"
         },
         {
-            "name": "elementary_serts_job_codes",
+            "name": "elementarySertsJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -97,7 +97,7 @@
             "direction": "in"
         },
         {
-            "name": "finance_job_codes",
+            "name": "financeJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -107,7 +107,7 @@
             "direction": "in"
         },
         {
-            "name": "finance_location_codes",
+            "name": "financeLocationCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -117,7 +117,7 @@
             "direction": "in"
         },
         {
-            "name": "grc_health_safety_location_codes",
+            "name": "grcHealthSafetyLocationCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -127,7 +127,7 @@
             "direction": "in"
         },
         {
-            "name": "itinerant_spec_ed_job_codes",
+            "name": "itinerantSpecEdJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -137,7 +137,7 @@
             "direction": "in"
         },
         {
-            "name": "itinerant_spec_ed_location_codes",
+            "name": "itinerantSpecEdLocationCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -147,7 +147,7 @@
             "direction": "in"
         },
         {
-            "name": "its_job_codes",
+            "name": "itsJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -157,7 +157,7 @@
             "direction": "in"
         },
         {
-            "name": "lars_communication_job_codes",
+            "name": "larsCommunicationJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -167,7 +167,7 @@
             "direction": "in"
         },
         {
-            "name": "procurement_qna_job_codes",
+            "name": "procurementQnaJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -177,7 +177,7 @@
             "direction": "in"
         },
         {
-            "name": "psychologists_job_codes",
+            "name": "psychologistsJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -187,7 +187,7 @@
             "direction": "in"
         },
         {
-            "name": "school_day_job_codes",
+            "name": "schoolDayJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -197,7 +197,7 @@
             "direction": "in"
         },
         {
-            "name": "secondary_serts_job_codes",
+            "name": "secondarySertsJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -207,7 +207,7 @@
             "direction": "in"
         },
         {
-            "name": "smaca_elementary_group_codes",
+            "name": "smacaElementaryGroupCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -217,7 +217,7 @@
             "direction": "in"
         },
         {
-            "name": "smaca_secondary_group_codes",
+            "name": "smacaSecondaryGroupCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -227,7 +227,7 @@
             "direction": "in"
         },
         {
-            "name": "social_workers_job_codes",
+            "name": "socialWorkersJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -237,7 +237,7 @@
             "direction": "in"
         },
         {
-            "name": "special_education_location_codes",
+            "name": "specialEducationLocationCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -247,7 +247,7 @@
             "direction": "in"
         },
         {
-            "name": "special_education_consultants_job_codes",
+            "name": "specialEducationConsultantsJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -257,7 +257,7 @@
             "direction": "in"
         },
         {
-            "name": "speech_language_job_codes",
+            "name": "speechLanguageJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -267,7 +267,7 @@
             "direction": "in"
         },
         {
-            "name": "system_leaders_job_codes",
+            "name": "systemLeadersJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -277,7 +277,7 @@
             "direction": "in"
         },
         {
-            "name": "thr_message_board_group_codes",
+            "name": "thrMessageBoardGroupCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -287,7 +287,7 @@
             "direction": "in"
         },
         {
-            "name": "trillium_job_codes",
+            "name": "trilliumJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -297,7 +297,7 @@
             "direction": "in"
         },
         {
-            "name": "twea_job_codes",
+            "name": "tweaJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",
@@ -307,7 +307,7 @@
             "direction": "in"
         },
         {
-            "name": "wrdsb_managers_job_codes",
+            "name": "wrdsbManagersJobCodes",
             "type": "cosmosDB",
             "databaseName": "wrdsb-igor",
             "collectionName": "groups-memberships-definitions",

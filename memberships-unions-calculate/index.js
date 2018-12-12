@@ -12,20 +12,20 @@ module.exports = async function (context) {
         process.env['wrdsbigor_STORAGE_KEY']
     );
 
-    var cama_group_codes = context.bindings.cama_group_codes.group_codes;
-    var dece_group_codes = context.bindings.dece_group_codes.group_codes;
-    var dece_excluded_job_codes = context.bindings.dece_excluded_job_codes.job_codes;
-    var dece_observer_job_codes = context.bindings.dece_observer_job_codes.job_codes;
-    var eaa_group_codes = context.bindings.eaa_group_codes.group_codes;
-    var eaa_excluded_job_codes = context.bindings.eaa_excluded_job_codes.job_codes;
-    var ess_group_codes = context.bindings.ess_group_codes.group_codes;
-    var etfo_group_codes = context.bindings.etfo_group_codes.group_codes;
-    var osstf_contract_group_codes = context.bindings.osstf_contract_group_codes.group_codes;
-    var osstf_ot_group_codes = context.bindings.osstf_ot_group_codes.group_codes;
-    var pssp_group_codes = context.bindings.pssp_group_codes.group_codes;
-    var smaca_group_codes = context.bindings.smaca_group_codes.group_codes;
-    var smaca_elementary_group_codes = context.bindings.smaca_elementary_group_codes.group_codes;
-    var smaca_secondary_group_codes = context.bindings.smaca_secondary_group_codes.group_codes;
+    var cama_group_codes = context.bindings.camaGroupCodes.group_codes;
+    var dece_group_codes = context.bindings.deceGroupCodes.group_codes;
+    var dece_excluded_job_codes = context.bindings.deceExcludedJobCodes.job_codes;
+    var dece_observer_job_codes = context.bindings.deceObserverJobCodes.job_codes;
+    var eaa_group_codes = context.bindings.eaaGroupCodes.group_codes;
+    var eaa_excluded_job_codes = context.bindings.eaaExcludedJobCodes.job_codes;
+    var ess_group_codes = context.bindings.essGroupCodes.group_codes;
+    var etfo_group_codes = context.bindings.etfoGroupCodes.group_codes;
+    var osstf_contract_group_codes = context.bindings.osstfContractGroupCodes.group_codes;
+    var osstf_ot_group_codes = context.bindings.osstfOtGroupCodes.group_codes;
+    var pssp_group_codes = context.bindings.psspGroupCodes.group_codes;
+    var smaca_group_codes = context.bindings.smacaGroupCodes.group_codes;
+    var smaca_elementary_group_codes = context.bindings.smacaElementaryGroupCodes.group_codes;
+    var smaca_secondary_group_codes = context.bindings.smacaSecondaryGroupCodes.group_codes;
 
     var calculated_members = await calculateMembers(rows);
     var blob_results = await parseMembers(calculated_members);

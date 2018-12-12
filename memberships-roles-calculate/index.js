@@ -12,19 +12,19 @@ module.exports = async function (context) {
         process.env['wrdsbigor_STORAGE_KEY']
     );
 
-    var elementary_admin_job_codes = context.bindings.elementary_admin_job_codes.job_codes;
-    var elementary_head_secretaries_job_codes = context.bindings.elementary_head_secretaries_job_codes.job_codes;
-    var elementary_c_secretaries_job_codes = context.bindings.elementary_c_secretaries_job_codes.job_codes;
-    var elementary_ot_teachers_job_codes = context.bindings.elementary_ot_teachers_job_codes.job_codes;
-    var elementary_teachers_group_codes = context.bindings.elementary_teachers_group_codes.group_codes;
-    var elementary_staffing_support_job_codes = context.bindings.elementary_staffing_support_job_codes.job_codes;
+    var elementary_admin_job_codes = context.bindings.elementaryAdminJobCodes.job_codes;
+    var elementary_head_secretaries_job_codes = context.bindings.elementaryHeadSecretariesJobCodes.job_codes;
+    var elementary_c_secretaries_job_codes = context.bindings.elementaryCSecretariesJobCodes.job_codes;
+    var elementary_ot_teachers_job_codes = context.bindings.elementaryOtTeachersJobCodes.job_codes;
+    var elementary_teachers_group_codes = context.bindings.elementaryTeachersGroupCodes.group_codes;
+    var elementary_staffing_support_job_codes = context.bindings.elementaryStaffingSupportJobCodes.job_codes;
     
-    var secondary_admin_job_codes = context.bindings.secondary_admin_job_codes.job_codes;
-    var secondary_office_supervisors_job_codes = context.bindings.secondary_office_supervisors_job_codes.job_codes;
-    var secondary_office_assistants_job_codes = context.bindings.secondary_office_assistants_job_codes.job_codes;
-    var secondary_c_secretaries_job_codes = context.bindings.secondary_c_secretaries_job_codes.job_codes;
-    var secondary_teachers_group_codes = context.bindings.secondary_teachers_group_codes.group_codes;
-    var secondary_ot_teachers_group_codes = context.bindings.secondary_ot_teachers_group_codes.group_codes;
+    var secondary_admin_job_codes = context.bindings.secondaryAdminJobCodes.job_codes;
+    var secondary_office_supervisors_job_codes = context.bindings.secondaryOfficeSupervisorsJobCodes.job_codes;
+    var secondary_office_assistants_job_codes = context.bindings.secondaryOfficeAssistantsJobCodes.job_codes;
+    var secondary_c_secretaries_job_codes = context.bindings.secondaryCSecretariesJobCodes.job_codes;
+    var secondary_teachers_group_codes = context.bindings.secondaryTeachersGroupCodes.group_codes;
+    var secondary_ot_teachers_group_codes = context.bindings.secondaryOtTeachersGroupCodes.group_codes;
 
     var calculated_members = await calculateMembers(rows);
     var blob_results = await parseMembers(calculated_members);

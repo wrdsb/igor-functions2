@@ -12,15 +12,15 @@ module.exports = async function (context) {
         process.env['wrdsbigor_STORAGE_KEY']
     );
 
-    var admin_job_codes = context.bindings.abc_admin_job_codes.job_codes;
-    var attendance_job_codes = context.bindings.abc_attendance_job_codes.job_codes;
-    var beforeafter_job_codes = context.bindings.abc_beforeafter_job_codes.job_codes;
-    var courier_job_codes = context.bindings.abc_courier_job_codes.job_codes;
-    var easyconnect_job_codes = context.bindings.abc_easyconnect_job_codes.job_codes;
-    var its_job_codes = context.bindings.abc_its_job_codes.job_codes;
-    var office_job_codes = context.bindings.abc_office_job_codes.job_codes;
-    var orders_job_codes = context.bindings.abc_orders_job_codes.job_codes;
-    var s4s_job_codes = context.bindings.abc_s4s_job_codes.job_codes;
+    var admin_job_codes = context.bindings.abcAdminJobCodes.job_codes;
+    var attendance_job_codes = context.bindings.abcAttendanceJobCodes.job_codes;
+    var beforeafter_job_codes = context.bindings.abcBeforeafterJobCodes.job_codes;
+    var courier_job_codes = context.bindings.abcCourierJobCodes.job_codes;
+    var easyconnect_job_codes = context.bindings.abcEasyconnectJobCodes.job_codes;
+    var its_job_codes = context.bindings.abcItsJobCodes.job_codes;
+    var office_job_codes = context.bindings.abcOfficeJobCodes.job_codes;
+    var orders_job_codes = context.bindings.abcOrdersJobCodes.job_codes;
+    var s4s_job_codes = context.bindings.abcS4sJobCodes.job_codes;
 
     var calculated_members = await calculateMembers(rows);
     var staff_members = calculated_members[0];
