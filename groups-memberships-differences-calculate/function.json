@@ -1,0 +1,49 @@
+{
+    "bindings": [
+        {
+            "name": "req",
+            "type": "httpTrigger",
+            "authLevel": "function",
+            "direction": "in",
+            "methods": [
+                "post"
+            ]
+        },
+        {
+            "name": "membershipsActual",
+            "type": "blob",
+            "path": "groups-memberships-actual-now/{group}.json",
+            "connection": "wrdsbigor_STORAGE",
+            "direction": "in"
+        },
+        {
+            "name": "membershipsIPPS",
+            "type": "blob",
+            "path": "groups-memberships-ipps-now/{group}.json",
+            "connection": "wrdsbigor_STORAGE",
+            "direction": "in"
+        },
+        {
+            "name": "membershipsOverrides",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "groups-memberships-overrides",
+            "Id": "{group}",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "membershipsDiff",
+            "type": "blob",
+            "path": "groups-memberships-differences/{group}.json",
+            "connection": "wrdsbigor_STORAGE",
+            "direction": "out"
+        },
+        {
+            "name": "res",
+            "type": "http",
+            "direction": "out"
+        }
+    ],
+    "disabled": false
+}
