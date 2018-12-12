@@ -12,7 +12,7 @@
         {
             "name": "groupMembershipsNow",
             "type": "blob",
-            "path": "groups-memberships-actual-now/{group}.json",
+            "path": "groups-memberships-actual-now/{id}.json",
             "connection": "wrdsbigor_STORAGE",
             "direction": "out"
         },
