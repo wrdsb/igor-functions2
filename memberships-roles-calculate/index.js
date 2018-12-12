@@ -8,8 +8,8 @@ module.exports = async function (context) {
 
     var azure = require('azure-storage');
     var blobService = azure.createBlobService(
-        'wrdsbflenderson',
-        process.env['wrdsbflenderson_STORAGE_KEY']
+        'wrdsbigor',
+        process.env['wrdsbigor_STORAGE_KEY']
     );
 
     var elementary_admin_job_codes = ['5130', '5130SEP', '5130SEPU', '5130TEP', '5131', '5131SEVP', '5131TEVP', '5107ADSL', '5456'];

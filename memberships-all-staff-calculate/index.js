@@ -8,8 +8,8 @@ module.exports = function (context) {
 
     var azure = require('azure-storage');
     var blobService = azure.createBlobService(
-        'wrdsbflenderson',
-        process.env['wrdsbflenderson_STORAGE_KEY']
+        'wrdsbigor',
+        process.env['wrdsbigor_STORAGE_KEY']
     );
 
     var groups = [
