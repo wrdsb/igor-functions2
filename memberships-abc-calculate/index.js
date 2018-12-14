@@ -130,6 +130,7 @@ module.exports = async function (context) {
                     members[school_code]['itunes'] = {};
                     members[school_code]['office'] = {};
                     members[school_code]['orders'] = {};
+                    members[school_code]['registrations'] = {};
                     members[school_code]['s4s'] = {};
                     members[school_code]['stswr'] = {};
                     members[school_code]['its'] = {};
@@ -244,6 +245,16 @@ module.exports = async function (context) {
                         status:         "ACTIVE",
                         type:           "USER",
                         groupKey:       school_code + '-orders@wrdsb.ca'
+                    };
+                }
+            
+                if (office_job_codes.includes(job_code)) {
+                    members[school_code]['registrations'][email] = {
+                        email:          email,
+                        role:           "MEMBER",
+                        status:         "ACTIVE",
+                        type:           "USER",
+                        groupKey:       school_code + '-registrations@wrdsb.ca'
                     };
                 }
             
