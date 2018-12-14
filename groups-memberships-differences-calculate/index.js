@@ -1,5 +1,5 @@
-module.exports = function (context, data) {
-    var group = data.group;
+module.exports = function (context, req) {
+    var group = req.body.group;
 
     var memberships_actual = context.bindings.membershipsActual.actual;
     var memberships_ipps = context.bindings.membershipsIPPS;
