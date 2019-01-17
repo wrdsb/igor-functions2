@@ -29,6 +29,7 @@ module.exports = async function (context) {
     var lars_communication_job_codes = context.bindings.larsCommunicationJobCodes.job_codes;
     var procurement_qna_job_codes = context.bindings.procurementQnaJobCodes.job_codes;
     var psychologists_job_codes = context.bindings.psychologistsJobCodes.job_codes;
+    var risk_job_codes = context.bindings.riskJobCodes.job_codes;
     var school_day_job_codes = context.bindings.schoolDayJobCodes.job_codes;
     var secondary_serts_job_codes = context.bindings.secondarySertsJobCodes.job_codes;
     var smaca_elementary_group_codes = context.bindings.smacaElementaryGroupCodes.group_codes;
@@ -303,6 +304,18 @@ module.exports = async function (context) {
                         status:         "ACTIVE",
                         type:           "USER",
                         groupKey:       "psychologists@wrdsb.ca"
+                    };
+                }
+                if (risk_job_codes.includes(job_code)) {
+                    if (!members['risk']) {
+                        members['risk'] = {};
+                    }
+                    members['risk'][email] = {
+                        email:          email,
+                        role:           "MEMBER",
+                        status:         "ACTIVE",
+                        type:           "USER",
+                        groupKey:       "risk@wrdsb.ca"
                     };
                 }
                 if (school_day_job_codes.includes(job_code)) {
