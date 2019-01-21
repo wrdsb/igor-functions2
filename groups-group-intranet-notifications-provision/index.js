@@ -2,7 +2,7 @@ module.exports = function (context, req) {
     var execution_timestamp = (new Date()).toJSON();  // format: 2012-04-23T18:25:43.511Z
 
     var site_name   = req.body.site.name;
-    var group_email = `intranet-${req.body.site.slug}.wrdsb.ca`;
+    var group_email = `intranet-${req.body.site.slug}@wrdsb.ca`;
     var group_name  = `${req.body.site.name} Notifications`;
 
     var group_to_create = {
