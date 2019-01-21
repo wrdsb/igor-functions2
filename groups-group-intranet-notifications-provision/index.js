@@ -49,7 +49,7 @@ module.exports = function (context, req) {
     group_to_create.email = group_email;
     group_to_create.customReplyTo = group_email;
     group_to_create.name = group_name;
-    group_to_create.description = `A private group for notifications from ${site_name}.`;
+    group_to_create.description = `A private group for notifications from the ${site_name} intranet site.`;
     group_to_create.customFooterText = "";
     group_to_create.defaultMessageDenyNotificationText = `You do not have permission to send messages to the Google Group "${group_name}". `
         + 'This Group is for one-way notifications only. '
