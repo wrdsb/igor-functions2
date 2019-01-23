@@ -15,7 +15,7 @@ module.exports = function (context, req) {
         whoCanViewGroup: "ALL_MEMBERS_CAN_VIEW",
         whoCanInvite: "ALL_MANAGERS_CAN_INVITE",
         whoCanAdd: "ALL_MANAGERS_CAN_ADD",
-        allowExternalMembers: "false",
+        allowExternalMembers: "true",
         whoCanPostMessage: "ALL_MANAGERS_CAN_POST",
         allowWebPosting: "false",
         primaryLanguage: "en",
