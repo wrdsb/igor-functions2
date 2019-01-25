@@ -3,7 +3,7 @@
     {
       "name": "req",
       "type": "httpTrigger",
-      "webHookType": "genericJson",
+      "authLevel": "function",
       "direction": "in",
       "methods": [
         "post"
