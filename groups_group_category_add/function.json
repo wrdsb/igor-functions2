@@ -11,16 +11,17 @@
     },
     {
       "name": "codexRecordIn",
-      "type": "documentDB",
+      "type": "cosmosDB",
       "databaseName": "igor",
       "collectionName": "groups-groups",
       "id" : "{id}",
+      "partitionKey": "{id}",
       "connection": "wrdsb-igor_CosmosDB",     
       "direction": "in"
     },
     {
       "name": "codexRecordOut",
-      "type": "documentDB",
+      "type": "cosmosDB",
       "databaseName": "igor",
       "collectionName": "groups-groups",
       "createIfNotExists": true,

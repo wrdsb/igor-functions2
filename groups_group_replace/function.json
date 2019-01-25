@@ -11,11 +11,11 @@
     },
     {
       "name": "codexRecordOut",
-      "type": "documentDB",
+      "type": "cosmosDB",
       "databaseName": "igor",
       "collectionName": "groups-groups",
       "createIfNotExists": true,
-      "connection": "wrdsb-igor_CosmosDB",     
+      "connection": "wrdsb-igor_CosmosDB",
       "direction": "out"
     },
     {
