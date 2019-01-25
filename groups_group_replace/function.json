@@ -14,7 +14,7 @@
       "type": "cosmosDB",
       "databaseName": "igor",
       "collectionName": "groups-groups",
-      "createIfNotExists": true,
+      "createIfNotExists": false,
       "connection": "wrdsb-igor_CosmosDB",
       "direction": "out"
     },
