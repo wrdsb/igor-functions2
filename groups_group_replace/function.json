@@ -15,7 +15,7 @@
       "databaseName": "igor",
       "collectionName": "groups-groups",
       "createIfNotExists": false,
-      "connection": "wrdsb-igor_CosmosDB",
+      "connectionStringSetting": "wrdsb-igor_CosmosDB",
       "direction": "out"
     },
     {
