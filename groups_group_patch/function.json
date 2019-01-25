@@ -16,7 +16,7 @@
       "collectionName": "groups-groups",
       "id" : "{email}",
       "partitionKey": "{email}",
-      "connectionStringSetting": "wrdsb-igor_CosmosDB",     
+      "connectionStringSetting": "wrdsb-igor_CosmosDB",
       "direction": "in"
     },
     {
@@ -25,7 +25,7 @@
       "databaseName": "igor",
       "collectionName": "groups-groups",
       "createIfNotExists": false,
-      "connectionStringSetting": "wrdsb-igor_CosmosDB",     
+      "connectionStringSetting": "wrdsb-igor_CosmosDB",
       "direction": "out"
     },
     {
