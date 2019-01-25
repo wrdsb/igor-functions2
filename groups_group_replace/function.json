@@ -1,0 +1,28 @@
+{
+  "bindings": [
+    {
+      "name": "req",
+      "type": "httpTrigger",
+      "webHookType": "genericJson",
+      "direction": "in",
+      "methods": [
+        "post"
+      ]
+    },
+    {
+      "name": "codexRecordOut",
+      "type": "documentDB",
+      "databaseName": "igor",
+      "collectionName": "groups-groups",
+      "createIfNotExists": true,
+      "connection": "wrdsb-igor_CosmosDB",     
+      "direction": "out"
+    },
+    {
+      "name": "res",
+      "type": "http",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
