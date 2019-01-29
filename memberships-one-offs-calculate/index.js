@@ -439,15 +439,15 @@ module.exports = async function (context) {
                     };
                 }
                 if (trillium_job_codes.includes(job_code)) {
-                    if (!members['trillium']) {
-                        members['trillium'] = {};
+                    if (!members['intranet-trillium']) {
+                        members['intranet-trillium'] = {};
                     }
-                    members['trillium'][email] = {
+                    members['intranet-trillium'][email] = {
                         email:          email,
                         role:           "MEMBER",
                         status:         "ACTIVE",
                         type:           "USER",
-                        groupKey:       "trillium@wrdsb.ca"
+                        groupKey:       "intranet-trillium@wrdsb.ca"
                     };
                 }
                 if (twea_job_codes.includes(job_code)) {
