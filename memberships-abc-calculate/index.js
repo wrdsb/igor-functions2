@@ -218,7 +218,7 @@ module.exports = async function (context) {
                     };
                 }
             
-                if (admin_job_codes.includes(job_code)) {
+                if (office_job_codes.includes(job_code)) {
                     members[school_code]['itunes'][email] = {
                         email:          email,
                         role:           "MEMBER",
