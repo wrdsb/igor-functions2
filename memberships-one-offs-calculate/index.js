@@ -26,7 +26,6 @@ module.exports = async function (context) {
     var itinerant_spec_ed_job_codes = context.bindings.itinerantSpecEdJobCodes.job_codes;
     var itinerant_spec_ed_location_codes = context.bindings.itinerantSpecEdLocationCodes.location_codes;
     var its_job_codes = context.bindings.itsJobCodes.job_codes;
-    var lars_communication_job_codes = context.bindings.larsCommunicationJobCodes.job_codes;
     var procurement_qna_job_codes = context.bindings.procurementQnaJobCodes.job_codes;
     var psychologists_job_codes = context.bindings.psychologistsJobCodes.job_codes;
     var risk_job_codes = context.bindings.riskJobCodes.job_codes;
@@ -40,9 +39,11 @@ module.exports = async function (context) {
     var speech_language_job_codes = context.bindings.speechLanguageJobCodes.job_codes;
     var system_leaders_job_codes = context.bindings.systemLeadersJobCodes.job_codes;
     var thr_message_board_group_codes = context.bindings.thrMessageBoardGroupCodes.group_codes;
-    var trillium_job_codes = context.bindings.trilliumJobCodes.job_codes;
     var twea_job_codes = context.bindings.tweaJobCodes.job_codes;
     var wrdsb_managers_job_codes = context.bindings.wrdsbManagersJobCodes.job_codes;
+
+    var intranet_library_job_codes = context.bindings.intranetLibraryJobCodes.job_codes;
+    var intranet_trillium_job_codes = context.bindings.intranetTrilliumJobCodes.job_codes;
 
     var calculated_members = await calculateMembers(rows);
     var blob_results = await parseMembers(calculated_members);
@@ -270,16 +271,16 @@ module.exports = async function (context) {
                         groupKey:       'its-staff@wrdsb.ca'
                     };
                 }
-                if (lars_communication_job_codes.includes(job_code)) {
-                    if (!members['lars-communication']) {
-                        members['lars-communication'] = {};
+                if (intranet_library_job_codes.includes(job_code)) {
+                    if (!members['intranet-library']) {
+                        members['intranet-library'] = {};
                     }
-                    members['lars-communication'][email] = {
+                    members['intranet-library'][email] = {
                         email:          email,
                         role:           "MEMBER",
                         status:         "ACTIVE",
                         type:           "USER",
-                        groupKey:       "lars-communication@wrdsb.ca"
+                        groupKey:       "intranet-library@wrdsb.ca"
                     };
                 }
                 if (procurement_qna_job_codes.includes(job_code)) {
@@ -438,7 +439,7 @@ module.exports = async function (context) {
                         groupKey:       "thr-message-board@wrdsb.ca"
                     };
                 }
-                if (trillium_job_codes.includes(job_code)) {
+                if (intranet_trillium_job_codes.includes(job_code)) {
                     if (!members['intranet-trillium']) {
                         members['intranet-trillium'] = {};
                     }
