@@ -42,6 +42,7 @@ module.exports = async function (context) {
     var twea_job_codes = context.bindings.tweaJobCodes.job_codes;
     var wrdsb_managers_job_codes = context.bindings.wrdsbManagersJobCodes.job_codes;
 
+    var intranet_its_job_codes = context.bindings.itsJobCodes.job_codes;
     var intranet_library_job_codes = context.bindings.intranetLibraryJobCodes.job_codes;
     var intranet_trillium_job_codes = context.bindings.intranetTrilliumJobCodes.job_codes;
 
@@ -269,6 +270,18 @@ module.exports = async function (context) {
                         status:         "ACTIVE",
                         type:           "USER",
                         groupKey:       'its-staff@wrdsb.ca'
+                    };
+                }
+                if (intranet_its_job_codes.includes(job_code)) {
+                    if (!members['intranet-its']) {
+                        members['intranet-its'] = {};
+                    }
+                    members['intranet-its'][email] = {
+                        email:          email,
+                        role:           "MEMBER",
+                        status:         "ACTIVE",
+                        type:           "USER",
+                        groupKey:       'intranet-its@wrdsb.ca'
                     };
                 }
                 if (intranet_library_job_codes.includes(job_code)) {
