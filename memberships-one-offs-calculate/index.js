@@ -248,18 +248,18 @@ module.exports = async function (context) {
                         groupKey:       'grc-health-safety@wrdsb.ca'
                     };
                 }
-                if (intranet_its_job_codes.includes(job_code)) {
-                    if (!members['intranet-its']) {
-                        members['intranet-its'] = {};
-                    }
-                    members['intranet-its'][email] = {
-                        email:          email,
-                        role:           "MEMBER",
-                        status:         "ACTIVE",
-                        type:           "USER",
-                        groupKey:       'intranet-its@wrdsb.ca'
-                    };
-                }
+                //if (intranet_its_job_codes.includes(job_code)) {
+                    //if (!members['intranet-its']) {
+                        //members['intranet-its'] = {};
+                    //}
+                    //members['intranet-its'][email] = {
+                        //email:          email,
+                        //role:           "MEMBER",
+                        //status:         "ACTIVE",
+                        //type:           "USER",
+                        //groupKey:       'intranet-its@wrdsb.ca'
+                    //};
+                //}
                 if (intranet_library_job_codes.includes(job_code)) {
                     if (!members['intranet-library']) {
                         members['intranet-library'] = {};
