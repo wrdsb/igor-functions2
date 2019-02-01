@@ -248,30 +248,6 @@ module.exports = async function (context) {
                         groupKey:       'grc-health-safety@wrdsb.ca'
                     };
                 }
-                if (itinerant_spec_ed_job_codes.includes(job_code) && itinerant_spec_ed_location_codes.includes(location_code)) {
-                    if (!members['itinerant-spec-ed']) {
-                        members['itinerant-spec-ed'] = {};
-                    }
-                    members['itinerant-spec-ed'][email] = {
-                        email:          email,
-                        role:           "MEMBER",
-                        status:         "ACTIVE",
-                        type:           "USER",
-                        groupKey:       "itinerant-spec-ed@wrdsb.ca"
-                    };
-                }
-                if (its_job_codes.includes(job_code)) {
-                    if (!members['its-staff']) {
-                        members['its-staff'] = {};
-                    }
-                    members['its-staff'][email] = {
-                        email:          email,
-                        role:           "MEMBER",
-                        status:         "ACTIVE",
-                        type:           "USER",
-                        groupKey:       'its-staff@wrdsb.ca'
-                    };
-                }
                 if (intranet_its_job_codes.includes(job_code)) {
                     if (!members['intranet-its']) {
                         members['intranet-its'] = {};
@@ -294,6 +270,78 @@ module.exports = async function (context) {
                         status:         "ACTIVE",
                         type:           "USER",
                         groupKey:       "intranet-library@wrdsb.ca"
+                    };
+                }
+                if (elementary_serts_job_codes.includes(job_code) && panel == 'E') {
+                    if (!members['intranet-special-education']) {
+                        members['intranet-special-education'] = {};
+                    }
+                    members['intranet-special-education'][email] = {
+                        email:          email,
+                        role:           "MEMBER",
+                        status:         "ACTIVE",
+                        type:           "USER",
+                        groupKey:       "intranet-special-education@wrdsb.ca"
+                    };
+                }
+                if (secondary_serts_job_codes.includes(job_code) && panel == 'S') {
+                    if (!members['intranet-special-education']) {
+                        members['intranet-special-education'] = {};
+                    }
+                    members['intranet-special-education'][email] = {
+                        email:          email,
+                        role:           "MEMBER",
+                        status:         "ACTIVE",
+                        type:           "USER",
+                        groupKey:       "intranet-special-education@wrdsb.ca"
+                    };
+                }
+                if (special_education_consultants_job_codes.includes(job_code)) {
+                    if (!members['intranet-special-education']) {
+                        members['intranet-special-education'] = {};
+                    }
+                    members['intranet-special-education'][email] = {
+                        email:          email,
+                        role:           "MEMBER",
+                        status:         "ACTIVE",
+                        type:           "USER",
+                        groupKey:       "intranet-special-education@wrdsb.ca"
+                    };
+                }
+                if (intranet_trillium_job_codes.includes(job_code)) {
+                    if (!members['intranet-trillium']) {
+                        members['intranet-trillium'] = {};
+                    }
+                    members['intranet-trillium'][email] = {
+                        email:          email,
+                        role:           "MEMBER",
+                        status:         "ACTIVE",
+                        type:           "USER",
+                        groupKey:       "intranet-trillium@wrdsb.ca"
+                    };
+                }
+                if (itinerant_spec_ed_job_codes.includes(job_code) && itinerant_spec_ed_location_codes.includes(location_code)) {
+                    if (!members['itinerant-spec-ed']) {
+                        members['itinerant-spec-ed'] = {};
+                    }
+                    members['itinerant-spec-ed'][email] = {
+                        email:          email,
+                        role:           "MEMBER",
+                        status:         "ACTIVE",
+                        type:           "USER",
+                        groupKey:       "itinerant-spec-ed@wrdsb.ca"
+                    };
+                }
+                if (its_job_codes.includes(job_code)) {
+                    if (!members['its-staff']) {
+                        members['its-staff'] = {};
+                    }
+                    members['its-staff'][email] = {
+                        email:          email,
+                        role:           "MEMBER",
+                        status:         "ACTIVE",
+                        type:           "USER",
+                        groupKey:       'its-staff@wrdsb.ca'
                     };
                 }
                 if (procurement_qna_job_codes.includes(job_code)) {
@@ -450,18 +498,6 @@ module.exports = async function (context) {
                         status:         "ACTIVE",
                         type:           "USER",
                         groupKey:       "thr-message-board@wrdsb.ca"
-                    };
-                }
-                if (intranet_trillium_job_codes.includes(job_code)) {
-                    if (!members['intranet-trillium']) {
-                        members['intranet-trillium'] = {};
-                    }
-                    members['intranet-trillium'][email] = {
-                        email:          email,
-                        role:           "MEMBER",
-                        status:         "ACTIVE",
-                        type:           "USER",
-                        groupKey:       "intranet-trillium@wrdsb.ca"
                     };
                 }
                 if (twea_job_codes.includes(job_code)) {
