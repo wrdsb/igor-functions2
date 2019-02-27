@@ -38,7 +38,7 @@ module.exports = async function (context) {
     var special_education_consultants_job_codes = context.bindings.specialEducationConsultantsJobCodes.job_codes;
     var speech_language_job_codes = context.bindings.speechLanguageJobCodes.job_codes;
     var system_leaders_job_codes = context.bindings.systemLeadersJobCodes.job_codes;
-    var thr_message_board_group_codes = context.bindings.thrMessageBoardGroupCodes.group_codes;
+    var thr_message_board_job_codes = context.bindings.thrMessageBoardJobCodes.job_codes;
     var twea_job_codes = context.bindings.tweaJobCodes.job_codes;
     var wrdsb_managers_job_codes = context.bindings.wrdsbManagersJobCodes.job_codes;
 
@@ -488,7 +488,7 @@ module.exports = async function (context) {
                         groupKey:       'system-leaders@wrdsb.ca'
                     };
                 }
-                if (thr_message_board_group_codes.includes(group_code)) {
+                if (thr_message_board_job_codes.includes(job_code)) {
                     if (!members['thr-message-board']) {
                         members['thr-message-board'] = {};
                     }
