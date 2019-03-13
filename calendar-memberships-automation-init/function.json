@@ -1,0 +1,29 @@
+{
+    "disabled": false,
+    "bindings": [
+        {
+            "authLevel": "function",
+            "type": "httpTrigger",
+            "direction": "in",
+            "name": "req",
+            "methods": [
+                "get",
+                "post"
+            ]
+        },
+        {
+            "name": "calendarMembershipsOverridesOut",
+            "type": "cosmosDB",
+            "databaseName": "igor",
+            "collectionName": "calendar-memberships-overrides",
+            "createIfNotExists": true,
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "out"
+        },
+        {
+            "type": "http",
+            "direction": "out",
+            "name": "res"
+        }
+    ]
+}
