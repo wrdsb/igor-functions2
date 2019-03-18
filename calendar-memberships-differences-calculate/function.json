@@ -29,6 +29,7 @@
             "databaseName": "igor",
             "collectionName": "calendar-memberships-overrides",
             "Id": "{calendar.slug}",
+            "partitionKey": "{calendar.slug}",
             "connectionStringSetting": "wrdsb-igor_CosmosDB",
             "direction": "in"
         },
