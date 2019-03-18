@@ -1,0 +1,26 @@
+{
+    "bindings": [
+        {
+            "name": "req",
+            "type": "httpTrigger",
+            "authLevel": "function",
+            "direction": "in",
+            "methods": [
+                "post"
+            ]
+        },
+        {
+            "name": "calendarMembershipsNow",
+            "type": "blob",
+            "path": "calendar-memberships-actual-now/{id}.json",
+            "connection": "wrdsbigor_STORAGE",
+            "direction": "out"
+        },
+        {
+            "name": "res",
+            "type": "http",
+            "direction": "out"
+        }
+    ],
+    "disabled": false
+}
