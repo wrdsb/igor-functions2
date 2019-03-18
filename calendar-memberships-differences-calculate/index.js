@@ -35,7 +35,7 @@ module.exports = function (context, req) {
         if (!memberships_ideal[member]) {
             console.log('Found extra member: ' + member);
             var extra_member = {};
-            extra_member.rule_id = memberships_actual[member].id;
+            extra_member.rule_id = memberships_actual[member].acl.id;
             extra_member.calendar_id = calendar.google_id;
             extra_memberships.push(extra_member);
         }
