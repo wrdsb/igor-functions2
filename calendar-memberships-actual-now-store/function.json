@@ -12,7 +12,7 @@
         {
             "name": "calendarMembershipsNow",
             "type": "blob",
-            "path": "calendar-memberships-actual-now/{id}.json",
+            "path": "calendar-memberships-actual-now/{slug}.json",
             "connection": "wrdsbigor_STORAGE",
             "direction": "out"
         },
