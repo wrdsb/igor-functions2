@@ -1,0 +1,30 @@
+{
+  "bindings": [
+    {
+      "name": "req",
+      "type": "httpTrigger",
+      "webHookType": "genericJson",
+      "direction": "in"
+    },
+    {
+      "name": "calendarMembershipsNow",
+      "type": "blob",
+      "path": "calendar-memberships-actual-now/{calendar}.json",
+      "connection": "wrdsbigor_STORAGE",
+      "direction": "in"
+    },
+    {
+      "name": "calendarMembershipsPrevious",
+      "type": "blob",
+      "path": "calendar-memberships-actual-previous/{calendar}.json",
+      "connection": "wrdsbigor_STORAGE",
+      "direction": "out"
+    },
+    {
+      "name": "res",
+      "type": "http",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
