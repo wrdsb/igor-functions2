@@ -1,0 +1,49 @@
+{
+    "bindings": [
+        {
+            "name": "req",
+            "type": "httpTrigger",
+            "authLevel": "function",
+            "direction": "in",
+            "methods": [
+                "post"
+            ]
+        },
+        {
+            "name": "membershipsActual",
+            "type": "blob",
+            "path": "calendar-memberships-actual-now/{calendar.slug}.json",
+            "connection": "wrdsbigor_STORAGE",
+            "direction": "in"
+        },
+        {
+            "name": "membershipsIPPS",
+            "type": "blob",
+            "path": "calendar-memberships-ipps-now/{calendar.slug}.json",
+            "connection": "wrdsbigor_STORAGE",
+            "direction": "in"
+        },
+        {
+            "name": "membershipsOverrides",
+            "type": "cosmosDB",
+            "databaseName": "wrdsb-igor",
+            "collectionName": "calendar-memberships-overrides",
+            "Id": "{calendar.slug}",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "membershipsDiff",
+            "type": "blob",
+            "path": "calendar-memberships-differences/{calendar.slug}.json",
+            "connection": "wrdsbigor_STORAGE",
+            "direction": "out"
+        },
+        {
+            "name": "res",
+            "type": "http",
+            "direction": "out"
+        }
+    ],
+    "disabled": false
+}
