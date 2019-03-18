@@ -46,7 +46,7 @@ module.exports = async function (context) {
     
     var secondary_admin_job_codes = context.bindings.secondaryAdminJobCodes.job_codes;
 
-    var calculated_members = await calculateMembers(rows);
+    var calculated_members = await calculateMembers(rows, calendars);
     var blob_results = await parseMembers(calculated_members);
 
     var response = {};
@@ -86,7 +86,7 @@ module.exports = async function (context) {
         return result;
     }
 
-    async function calculateMembers (rows) {
+    async function calculateMembers (rows, calendars) {
         var members = {};
 
         rows.forEach(function(row) {
