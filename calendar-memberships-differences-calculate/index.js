@@ -1,7 +1,7 @@
 module.exports = function (context, req) {
     var calendar = req.body.calendar;
 
-    var memberships_actual = context.bindings.membershipsActual.actual;
+    var memberships_actual = context.bindings.membershipsActual;
     var memberships_ipps = context.bindings.membershipsIPPS;
     var memberships_central = context.bindings.membershipsOverrides.central;
 
