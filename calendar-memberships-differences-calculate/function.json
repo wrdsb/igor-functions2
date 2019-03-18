@@ -26,7 +26,7 @@
         {
             "name": "membershipsOverrides",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "calendar-memberships-overrides",
             "Id": "{calendar.slug}",
             "connectionStringSetting": "wrdsb-igor_CosmosDB",
