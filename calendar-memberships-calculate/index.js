@@ -173,7 +173,7 @@ module.exports = async function (context) {
                             },
                             role: "reader"
                         },
-                        calendar_id: calendars.staffing_teachers_secondary.google_id
+                        calendar_id: calendars.staffing_teachers_secondary_calendar.google_id
                     };
 
                     if (!members['staffing-ea-cyw']) {
