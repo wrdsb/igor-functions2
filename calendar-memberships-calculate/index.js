@@ -117,6 +117,7 @@ module.exports = async function (context) {
                 }
 
                 if (elementary_staffing_support_job_codes.includes(job_code)) {
+
                     if (!members['staffing-teachers-elementary']) {
                         members['staffing-teachers-elementary'] = {};
                     }
@@ -128,8 +129,12 @@ module.exports = async function (context) {
                             },
                             role: "reader"
                         },
-                        calendar_id: calendars.staffing_teachers_elementary.google_id
+                        calendar_id: calendars.staffing_teachers_elementary_calendar.google_id
                     };
+
+                    if (!members['staffing-ea-cyw']) {
+                        members['staffing-ea-cyw'] = {};
+                    }
                     members['staffing-ea-cyw'][email] = {
                         acl: {
                             scope: {
@@ -138,8 +143,12 @@ module.exports = async function (context) {
                             },
                             role: "reader"
                         },
-                        calendar_id: calendars.staffing_ea_cyw.google_id
+                        calendar_id: calendars.staffing_ea_cyw_calendar.google_id
                     };
+
+                    if (!members['staffing-dece']) {
+                        members['staffing-dece'] = {};
+                    }
                     members['staffing-dece'][email] = {
                         acl: {
                             scope: {
@@ -148,7 +157,7 @@ module.exports = async function (context) {
                             },
                             role: "reader"
                         },
-                        calendar_id: calendars.staffing_dece.google_id
+                        calendar_id: calendars.staffing_dece_calendar.google_id
                     };
                 }
                 
@@ -166,6 +175,10 @@ module.exports = async function (context) {
                         },
                         calendar_id: calendars.staffing_teachers_secondary.google_id
                     };
+
+                    if (!members['staffing-ea-cyw']) {
+                        members['staffing-ea-cyw'] = {};
+                    }
                     members['staffing-ea-cyw'][email] = {
                         acl: {
                             scope: {
@@ -174,7 +187,7 @@ module.exports = async function (context) {
                             },
                             role: "reader"
                         },
-                        calendar_id: calendars.staffing_ea_cyw.google_id
+                        calendar_id: calendars.staffing_ea_cyw_calendar.google_id
                     };
                 }
             }
