@@ -1,11 +1,17 @@
 module.exports = function (context, req) {
     var group = req.body.group;
 
-    var memberships_actual = context.bindings.membershipsActual.actual;
-    var memberships_ipps = context.bindings.membershipsIPPS;
-    var memberships_central = context.bindings.membershipsOverrides.central;
+    var actual = context.bindings.membershipsActual.actual;
+    var trillium = context.bindings.membershipsTrillium;
+    var ipps = context.bindings.membershipsIPPS;
+    var central = context.bindings.membershipsOverrides.central;
 
-    var memberships_ideal = Object.assign(memberships_ipps, memberships_central);
+    var memberships_actual = (actual) ? actual : {};
+    var memberships_trillium = (trillium) ? trillium : {};
+    var memberships_ipps = (ipps) ? ipps : {};
+    var memberships_central = (central) ? central : {} ;
+
+    var memberships_ideal = Object.assign(memberships_trillium, memberships_ipps, memberships_central);
 
     // objects to store our diff parts
     var missing_memberships = [];
