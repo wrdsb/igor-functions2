@@ -31,7 +31,7 @@ module.exports = async function (context) {
         var create_blob_results = [];
 
         Object.getOwnPropertyNames(members).forEach(async function (group_slug) {
-            var blob_name = group_slug +'-students@wrdsb.ca.json';
+            var blob_name = group_slug + '-students@wrdsb.ca.json';
             var memberships = JSON.stringify(members[group_slug]);
             var result = await createBlob(container, blob_name, memberships);
             create_blob_results.push(result);
@@ -58,7 +58,7 @@ module.exports = async function (context) {
         students.forEach(function(student) {
             if (student.student_email) {
                 var email = (student.student_email) ? student.student_email : '';
-                var school_code = (student.school_code) ? student.school_code : '';
+                var school_code = (student.school_code) ? student.school_code.toLowerCase() : '';
                 var oyap = (student.student_oyap === 'Y') ? true : false;
 
                 if (!members[school_code]) {
@@ -87,6 +87,6 @@ module.exports = async function (context) {
                 }
             }
         });
-        return [members];
+        return members;
     }
 }
