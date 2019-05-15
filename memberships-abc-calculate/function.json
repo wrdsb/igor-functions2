@@ -19,7 +19,7 @@
         {
             "name": "abcAdminJobCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "abc_admin_job_codes",
             "partitionKey": "abc_admin_job_codes",
@@ -29,7 +29,7 @@
         {
             "name": "abcAttendanceJobCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "abc_attendance_job_codes",
             "partitionKey": "abc_attendance_job_codes",
@@ -39,7 +39,7 @@
         {
             "name": "abcBeforeafterJobCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "abc_beforeafter_job_codes",
             "partitionKey": "abc_beforeafter_job_codes",
@@ -49,7 +49,7 @@
         {
             "name": "abcCourierJobCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "abc_courier_job_codes",
             "partitionKey": "abc_courier_job_codes",
@@ -59,7 +59,7 @@
         {
             "name": "abcEasyconnectJobCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "abc_easyconnect_job_codes",
             "partitionKey": "abc_easyconnect_job_codes",
@@ -69,7 +69,7 @@
         {
             "name": "abcItsJobCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "abc_its_job_codes",
             "partitionKey": "abc_its_job_codes",
@@ -79,7 +79,7 @@
         {
             "name": "abcOfficeJobCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "abc_office_job_codes",
             "partitionKey": "abc_office_job_codes",
@@ -89,7 +89,7 @@
         {
             "name": "abcOrdersJobCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "abc_orders_job_codes",
             "partitionKey": "abc_orders_job_codes",
@@ -99,7 +99,7 @@
         {
             "name": "abcS4sJobCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "abc_s4s_job_codes",
             "partitionKey": "abc_s4s_job_codes",

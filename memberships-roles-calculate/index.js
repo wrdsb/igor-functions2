@@ -15,8 +15,8 @@ module.exports = async function (context) {
     var elementary_admin_job_codes = context.bindings.elementaryAdminJobCodes.job_codes;
     var elementary_head_secretaries_job_codes = context.bindings.elementaryHeadSecretariesJobCodes.job_codes;
     var elementary_c_secretaries_job_codes = context.bindings.elementaryCSecretariesJobCodes.job_codes;
-    var elementary_ot_teachers_job_codes = context.bindings.elementaryOtTeachersJobCodes.job_codes;
     var elementary_teachers_group_codes = context.bindings.elementaryTeachersGroupCodes.group_codes;
+    var elementary_ot_teachers_job_codes = context.bindings.elementaryOtTeachersJobCodes.job_codes;
     var elementary_staffing_support_job_codes = context.bindings.elementaryStaffingSupportJobCodes.job_codes;
     
     var secondary_admin_job_codes = context.bindings.secondaryAdminJobCodes.job_codes;
@@ -25,6 +25,9 @@ module.exports = async function (context) {
     var secondary_c_secretaries_job_codes = context.bindings.secondaryCSecretariesJobCodes.job_codes;
     var secondary_teachers_group_codes = context.bindings.secondaryTeachersGroupCodes.group_codes;
     var secondary_ot_teachers_group_codes = context.bindings.secondaryOtTeachersGroupCodes.group_codes;
+    //var secondary_staffing_support_job_codes = context.bindings.secondaryStaffingSupportJobCodes.job_codes;
+
+    //var educational_assistants_job_codes = context.bindings.educationalAssistantsJobCodes.job_codes;
 
     var calculated_members = await calculateMembers(rows);
     var blob_results = await parseMembers(calculated_members);
@@ -251,6 +254,19 @@ module.exports = async function (context) {
                         groupKey:       "secondary-ot-teachers@wrdsb.ca"
                     };
                 }
+
+                //if (educational_assistants_job_codes.includes(job_code)) {
+                    //if (!members['educational-assistants']) {
+                        //members['educational-assistants'] = {};
+                    //}
+                    //members['educational-assistants'][email] = {
+                        //email:          email,
+                        //role:           "MEMBER",
+                        //status:         "ACTIVE",
+                        //type:           "USER",
+                        //groupKey:       "educational-assistants@wrdsb.ca"
+                    //};
+                //}
             }
         });
         return members;

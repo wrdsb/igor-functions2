@@ -19,7 +19,7 @@
         {
             "name": "elementaryStaffingSupportJobCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "elementary_staffing_support_job_codes",
             "partitionKey": "elementary_staffing_support_job_codes",
@@ -29,7 +29,7 @@
         {
             "name": "secondaryAdminJobCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "secondary_admin_job_codes",
             "partitionKey": "secondary_admin_job_codes",

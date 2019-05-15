@@ -19,7 +19,7 @@
         {
             "name": "camaGroupCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "cama_group_codes",
             "partitionKey": "cama_group_codes",
@@ -29,7 +29,7 @@
         {
             "name": "deceGroupCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "dece_group_codes",
             "partitionKey": "dece_group_codes",
@@ -39,7 +39,7 @@
         {
             "name": "deceExcludedJobCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "dece_excluded_job_codes",
             "partitionKey": "dece_excluded_job_codes",
@@ -49,7 +49,7 @@
         {
             "name": "deceObserverJobCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "dece_observer_job_codes",
             "partitionKey": "dece_observer_job_codes",
@@ -59,7 +59,7 @@
         {
             "name": "eaaGroupCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "eaa_group_codes",
             "partitionKey": "eaa_group_codes",
@@ -69,7 +69,7 @@
         {
             "name": "eaaExcludedJobCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "eaa_excluded_job_codes",
             "partitionKey": "eaa_excluded_job_codes",
@@ -79,7 +79,7 @@
         {
             "name": "essGroupCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "ess_group_codes",
             "partitionKey": "ess_group_codes",
@@ -89,7 +89,7 @@
         {
             "name": "etfoGroupCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "etfo_group_codes",
             "partitionKey": "etfo_group_codes",
@@ -99,7 +99,7 @@
         {
             "name": "osstfContractGroupCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "osstf_contract_group_codes",
             "partitionKey": "osstf_contract_group_codes",
@@ -109,7 +109,7 @@
         {
             "name": "osstfOtGroupCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "osstf_ot_group_codes",
             "partitionKey": "osstf_ot_group_codes",
@@ -119,7 +119,7 @@
         {
             "name": "psspGroupCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "pssp_group_codes",
             "partitionKey": "pssp_group_codes",
@@ -129,7 +129,7 @@
         {
             "name": "smacaGroupCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "smaca_group_codes",
             "partitionKey": "smaca_group_codes",
@@ -139,7 +139,7 @@
         {
             "name": "smacaElementaryGroupCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "smaca_elementary_group_codes",
             "partitionKey": "smaca_elementary_group_codes",
@@ -149,7 +149,7 @@
         {
             "name": "smacaSecondaryGroupCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "smaca_secondary_group_codes",
             "partitionKey": "smaca_secondary_group_codes",

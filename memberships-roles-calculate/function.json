@@ -19,7 +19,7 @@
         {
             "name": "elementaryAdminJobCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "elementary_admin_job_codes",
             "partitionKey": "elementary_admin_job_codes",
@@ -29,7 +29,7 @@
         {
             "name": "elementaryHeadSecretariesJobCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "elementary_head_secretaries_job_codes",
             "partitionKey": "elementary_head_secretaries_job_codes",
@@ -39,7 +39,7 @@
         {
             "name": "elementaryCSecretariesJobCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "elementary_c_secretaries_job_codes",
             "partitionKey": "elementary_c_secretaries_job_codes",
@@ -49,7 +49,7 @@
         {
             "name": "elementaryOtTeachersJobCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "elementary_ot_teachers_job_codes",
             "partitionKey": "elementary_ot_teachers_job_codes",
@@ -59,7 +59,7 @@
         {
             "name": "elementaryTeachersGroupCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "elementary_teachers_group_codes",
             "partitionKey": "elementary_teachers_group_codes",
@@ -69,7 +69,7 @@
         {
             "name": "elementaryStaffingSupportJobCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "elementary_staffing_support_job_codes",
             "partitionKey": "elementary_staffing_support_job_codes",
@@ -79,7 +79,7 @@
         {
             "name": "secondaryAdminJobCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "secondary_admin_job_codes",
             "partitionKey": "secondary_admin_job_codes",
@@ -89,7 +89,7 @@
         {
             "name": "secondaryOfficeSupervisorsJobCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "secondary_office_supervisors_job_codes",
             "partitionKey": "secondary_office_supervisors_job_codes",
@@ -99,7 +99,7 @@
         {
             "name": "secondaryOfficeAssistantsJobCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "secondary_office_assistants_job_codes",
             "partitionKey": "secondary_office_assistants_job_codes",
@@ -109,7 +109,7 @@
         {
             "name": "secondaryCSecretariesJobCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "secondary_c_secretaries_job_codes",
             "partitionKey": "secondary_c_secretaries_job_codes",
@@ -119,7 +119,7 @@
         {
             "name": "secondaryTeachersGroupCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "secondary_teachers_group_codes",
             "partitionKey": "secondary_teachers_group_codes",
@@ -129,7 +129,7 @@
         {
             "name": "secondaryOtTeachersGroupCodes",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-definitions",
             "id": "secondary_ot_teachers_group_codes",
             "partitionKey": "secondary_ot_teachers_group_codes",
