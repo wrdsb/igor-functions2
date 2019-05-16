@@ -2,18 +2,9 @@ module.exports = function (context, req) {
     var group = req.body.group;
 
     var actual = context.bindings.membershipsActual.actual;
-    var trillium = {};
+    var trillium = context.bindings.membershipsTrillium;
     var ipps = context.bindings.membershipsIPPS;
     var central = context.bindings.membershipsOverrides.central;
-
-    //var trillium = context.bindings.membershipsTrillium;
-    //{
-        //"name": "membershipsTrillium",
-        //"type": "blob",
-        //"path": "groups-memberships-trillium-now/{group}.json",
-        //"connection": "wrdsbigor_STORAGE",
-        //"direction": "in"
-    //},
 
     var memberships_actual = (actual) ? actual : {};
     var memberships_trillium = (trillium) ? trillium : {};
