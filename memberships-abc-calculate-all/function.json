@@ -1,11 +1,13 @@
 {
     "bindings": [
         {
-            "name": "triggerMessage",
-            "type": "queueTrigger",
+            "name": "req",
+            "type": "httpTrigger",
+            "authLevel": "function",
             "direction": "in",
-            "queueName": "sis-enrolments-reconcile",
-            "connection": "wrdsbskinner_STORAGE"
+            "methods": [
+                "post"
+            ]
         },
         {
             "name": "iamwpRaw",
@@ -103,6 +105,11 @@
             "partitionKey": "abc_s4s_job_codes",
             "connectionStringSetting": "wrdsb-igor_CosmosDB",
             "direction": "in"
+        },
+        {
+            "name": "$return",
+            "type": "http",
+            "direction": "out"
         }
     ],
     "disabled": false

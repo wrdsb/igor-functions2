@@ -1,7 +1,5 @@
-module.exports = async function (context, message) {
+module.exports = async function (context) {
     var execution_timestamp = (new Date()).toJSON();  // format: 2012-04-23T18:25:43.511Z
-    var requested_school_code = message.school_code.toLowerCase();
-
     var rows = context.bindings.iamwpRaw;
 
     var container = 'groups-memberships-ipps-now';
@@ -51,11 +49,13 @@ module.exports = async function (context, message) {
     async function parseStaffMembers(members) {
         var create_blob_results = [];
 
-        Object.getOwnPropertyNames(members).forEach(async function (group_slug) {
-            var blob_name = requested_school_code +'-'+ group_slug +'@wrdsb.ca.json';
-            var memberships = JSON.stringify(members[group_slug]);
-            var result = await createBlob(container, blob_name, memberships);
-            create_blob_results.push(result);
+        Object.getOwnPropertyNames(members).forEach(async function (school_code) {
+            Object.getOwnPropertyNames(members[school_code]).forEach(async function (group_slug) {
+                var blob_name = school_code +'-'+ group_slug +'@wrdsb.ca.json';
+                var memberships = JSON.stringify(members[school_code][group_slug]);
+                var result = await createBlob(container, blob_name, memberships);
+                create_blob_results.push(result);
+            });
         });
 
         return create_blob_results;
@@ -64,10 +64,12 @@ module.exports = async function (context, message) {
     async function parsePublicMembers(members) {
         var create_blob_results = [];
 
-        var blob_name = requested_school_code +'@wrdsb.ca.json';
-        var memberships = JSON.stringify(members);
-        var result = await createBlob(container, blob_name, memberships);
-        create_blob_results.push(result);
+        Object.getOwnPropertyNames(members).forEach(async function (school_code) {
+            var blob_name = school_code +'@wrdsb.ca.json';
+            var memberships = JSON.stringify(members[school_code]);
+            var result = await createBlob(container, blob_name, memberships);
+            create_blob_results.push(result);
+        });
 
         return create_blob_results;
     }
@@ -86,20 +88,6 @@ module.exports = async function (context, message) {
 
     async function calculateMembers (rows) {
         var members = {};
-        members['staff'] = {};
-        members['staff-discussion'] = {};
-        members['admin'] = {};
-        members['attendance'] = {};
-        members['beforeafter'] = {};
-        members['easyconnect'] = {};
-        members['itunes'] = {};
-        members['office'] = {};
-        members['orders'] = {};
-        members['registrations'] = {};
-        members['s4s'] = {};
-        members['stswr'] = {};
-        members['its'] = {};
-    
         var public_members = {};
 
         rows.forEach(function(row) {
@@ -107,7 +95,6 @@ module.exports = async function (context, message) {
                 && !excluded_job_codes.includes(row.JOB_CODE)
                 && activity_codes.includes(row.ACTIVITY_CODE)
                 && isNaN(row.SCHOOL_CODE)
-                && requested_school_code == row.SCHOOL_CODE.toLowerCase()
             ) {
                 if (row.EMAIL_ADDRESS) {
                     var email = row.EMAIL_ADDRESS;
@@ -131,8 +118,30 @@ module.exports = async function (context, message) {
                     var activity_code = row.ACTIVITY_CODE;
                 }
 
+                if (!members[school_code]) {
+                    members[school_code] = {};
+                
+                    members[school_code]['staff'] = {};
+                    members[school_code]['staff-discussion'] = {};
+                    members[school_code]['admin'] = {};
+                    members[school_code]['attendance'] = {};
+                    members[school_code]['beforeafter'] = {};
+                    members[school_code]['easyconnect'] = {};
+                    members[school_code]['itunes'] = {};
+                    members[school_code]['office'] = {};
+                    members[school_code]['orders'] = {};
+                    members[school_code]['registrations'] = {};
+                    members[school_code]['s4s'] = {};
+                    members[school_code]['stswr'] = {};
+                    members[school_code]['its'] = {};
+                }
+            
+                if (!public_members[school_code]) {
+                    public_members[school_code] = {};
+                }
+
                 if (admin_job_codes.includes(job_code)) {
-                    members['staff'][email] = {
+                    members[school_code]['staff'][email] = {
                         email:          email,
                         role:           "MANAGER",
                         status:         "ACTIVE",
@@ -140,7 +149,7 @@ module.exports = async function (context, message) {
                         groupKey:       school_code + '-staff@wrdsb.ca'
                     };
                 } else {
-                    members['staff'][email] = {
+                    members[school_code]['staff'][email] = {
                         email:          email,
                         role:           "MEMBER",
                         status:         "ACTIVE",
@@ -150,7 +159,7 @@ module.exports = async function (context, message) {
                 }
         
                 if (office_job_codes.includes(job_code)) {
-                    members['staff-discussion'][email] = {
+                    members[school_code]['staff-discussion'][email] = {
                         email:          email,
                         role:           "MANAGER",
                         status:         "ACTIVE",
@@ -160,7 +169,7 @@ module.exports = async function (context, message) {
                 }
             
                 if (admin_job_codes.includes(job_code)) {
-                    members['admin'][email] = {
+                    members[school_code]['admin'][email] = {
                         email:          email,
                         role:           "MEMBER",
                         status:         "ACTIVE",
@@ -170,7 +179,7 @@ module.exports = async function (context, message) {
                 }
             
                 if (attendance_job_codes.includes(job_code)) {
-                    members['attendance'][email] = {
+                    members[school_code]['attendance'][email] = {
                         email:          email,
                         role:           "MEMBER",
                         status:         "ACTIVE",
@@ -180,7 +189,7 @@ module.exports = async function (context, message) {
                 }
             
                 if (beforeafter_job_codes.includes(job_code)) {
-                    members['beforeafter'][email] = {
+                    members[school_code]['beforeafter'][email] = {
                         email:          email,
                         role:           "MEMBER",
                         status:         "ACTIVE",
@@ -190,7 +199,7 @@ module.exports = async function (context, message) {
                 }
             
                 if (easyconnect_job_codes.includes(job_code)) {
-                    members['easyconnect'][email] = {
+                    members[school_code]['easyconnect'][email] = {
                         email:          email,
                         role:           "MEMBER",
                         status:         "ACTIVE",
@@ -200,7 +209,7 @@ module.exports = async function (context, message) {
                 }
             
                 if (its_job_codes.includes(job_code)) {
-                    members['its'][email] = {
+                    members[school_code]['its'][email] = {
                         email:          email,
                         role:           "MEMBER",
                         status:         "ACTIVE",
@@ -210,7 +219,7 @@ module.exports = async function (context, message) {
                 }
             
                 if (office_job_codes.includes(job_code)) {
-                    members['itunes'][email] = {
+                    members[school_code]['itunes'][email] = {
                         email:          email,
                         role:           "MEMBER",
                         status:         "ACTIVE",
@@ -220,7 +229,7 @@ module.exports = async function (context, message) {
                 }
             
                 if (office_job_codes.includes(job_code)) {
-                    members['office'][email] = {
+                    members[school_code]['office'][email] = {
                         email:          email,
                         role:           "MEMBER",
                         status:         "ACTIVE",
@@ -230,7 +239,7 @@ module.exports = async function (context, message) {
                 }
             
                 if (orders_job_codes.includes(job_code)) {
-                    members['orders'][email] = {
+                    members[school_code]['orders'][email] = {
                         email:          email,
                         role:           "MEMBER",
                         status:         "ACTIVE",
@@ -240,7 +249,7 @@ module.exports = async function (context, message) {
                 }
             
                 if (office_job_codes.includes(job_code)) {
-                    members['registrations'][email] = {
+                    members[school_code]['registrations'][email] = {
                         email:          email,
                         role:           "MEMBER",
                         status:         "ACTIVE",
@@ -250,7 +259,7 @@ module.exports = async function (context, message) {
                 }
             
                 if (s4s_job_codes.includes(job_code)) {
-                    members['s4s'][email] = {
+                    members[school_code]['s4s'][email] = {
                         email:          email,
                         role:           "MEMBER",
                         status:         "ACTIVE",
@@ -260,7 +269,7 @@ module.exports = async function (context, message) {
                 }
             
                 if (office_job_codes.includes(job_code)) {
-                    members['stswr'][email] = {
+                    members[school_code]['stswr'][email] = {
                         email:          email,
                         role:           "MEMBER",
                         status:         "ACTIVE",
@@ -270,7 +279,7 @@ module.exports = async function (context, message) {
                 }
             
                 if (office_job_codes.includes(job_code)) {
-                    public_members[email] = {
+                    public_members[school_code][email] = {
                         email:          email,
                         role:           "MEMBER",
                         status:         "ACTIVE",
