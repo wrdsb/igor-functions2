@@ -36,6 +36,7 @@
             "databaseName": "igor",
             "collectionName": "groups-memberships-overrides",
             "Id": "{group}",
+            "partitionKey": "{group}",
             "connectionStringSetting": "wrdsb-igor_CosmosDB",
             "direction": "in"
         },
