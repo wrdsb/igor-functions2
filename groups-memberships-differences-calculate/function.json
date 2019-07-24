@@ -35,7 +35,7 @@
             "type": "cosmosDB",
             "databaseName": "igor",
             "collectionName": "groups-memberships-overrides",
-            "Id": "{group}",
+            "id": "{group}",
             "partitionKey": "{group}",
             "connectionStringSetting": "wrdsb-igor_CosmosDB",
             "direction": "in"
