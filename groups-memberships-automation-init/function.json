@@ -14,7 +14,7 @@
         {
             "name": "groupsMembershipsOverridesOut",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-overrides",
             "createIfNotExists": true,
             "connectionStringSetting": "wrdsb-igor_CosmosDB",

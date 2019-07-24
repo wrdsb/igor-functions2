@@ -33,7 +33,7 @@
         {
             "name": "membershipsOverrides",
             "type": "cosmosDB",
-            "databaseName": "wrdsb-igor",
+            "databaseName": "igor",
             "collectionName": "groups-memberships-overrides",
             "Id": "{group}",
             "connectionStringSetting": "wrdsb-igor_CosmosDB",
