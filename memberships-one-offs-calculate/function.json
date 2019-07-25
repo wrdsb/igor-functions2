@@ -12,7 +12,7 @@
         {
             "name": "iamwpRaw",
             "type": "blob",
-            "path": "ipps/view-iamwp-raw.json",
+            "path": "hris/view-iamwp-raw.json",
             "connection": "wrdsbflenderson_STORAGE",
             "direction": "in"
         },
