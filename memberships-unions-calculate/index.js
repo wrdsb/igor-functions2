@@ -160,6 +160,30 @@ module.exports = async function (context) {
                         type:           "USER",
                         groupKey:       'eaa@wrdsb.ca'
                     };
+                    if (panel == 'E') {
+                        if (!members['eaa-elementary']) {
+                            members['eaa-elementary'] = {};
+                        }
+                        members['eaa-elementary'][email] = {
+                            email:          email,
+                            role:           "MEMBER",
+                            status:         "ACTIVE",
+                            type:           "USER",
+                            groupKey:       'eaa-elementary@wrdsb.ca'
+                        };
+                    }
+                    if (panel == 'S') {
+                        if (!members['eaa-secondary']) {
+                            members['eaa-secondary'] = {};
+                        }
+                        members['eaa-secondary'][email] = {
+                            email:          email,
+                            role:           "MEMBER",
+                            status:         "ACTIVE",
+                            type:           "USER",
+                            groupKey:       'eaa-secondary@wrdsb.ca'
+                        };
+                    }
                 }
 
                 if (ess_group_codes.includes(group_code)) {

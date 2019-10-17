@@ -1,6 +1,7 @@
-module.exports = function (context, data) {
+module.exports = function (context, req) {
     var current_record;
     var merged_record;
+    var data = req.body;
 
     context.log(data);
 
