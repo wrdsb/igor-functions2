@@ -13,6 +13,7 @@ module.exports = async function (context) {
     );
 
     var cama_group_codes = context.bindings.camaGroupCodes.group_codes;
+    var cyw_job_codes = context.bindings.cywJobCodes.job_codes;
     var dece_group_codes = context.bindings.deceGroupCodes.group_codes;
     var dece_excluded_job_codes = context.bindings.deceExcludedJobCodes.job_codes;
     var dece_observer_job_codes = context.bindings.deceObserverJobCodes.job_codes;
@@ -107,6 +108,19 @@ module.exports = async function (context) {
                         status:         "ACTIVE",
                         type:           "USER",
                         groupKey:       'cama@wrdsb.ca'
+                    };
+                }
+
+                if (cyw_job_codes.includes(job_code)) {
+                    if (!members['cyw']) {
+                        members['cyw'] = {};
+                    }
+                    members['cyw'][email] = {
+                        email:          email,
+                        role:           "MEMBER",
+                        status:         "ACTIVE",
+                        type:           "USER",
+                        groupKey:       'cyw@wrdsb.ca'
                     };
                 }
 
