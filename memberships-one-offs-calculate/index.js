@@ -26,6 +26,7 @@ module.exports = async function (context) {
     var itinerant_spec_ed_job_codes = context.bindings.itinerantSpecEdJobCodes.job_codes;
     var itinerant_spec_ed_location_codes = context.bindings.itinerantSpecEdLocationCodes.location_codes;
     var its_job_codes = context.bindings.itsJobCodes.job_codes;
+    var its_location_codes = context.bindings.itsLocationCodes.job_codes;
     var procurement_qna_job_codes = context.bindings.procurementQnaJobCodes.job_codes;
     var psychologists_job_codes = context.bindings.psychologistsJobCodes.job_codes;
     var risk_job_codes = context.bindings.riskJobCodes.job_codes;
@@ -42,7 +43,7 @@ module.exports = async function (context) {
     var twea_job_codes = context.bindings.tweaJobCodes.job_codes;
     var wrdsb_managers_job_codes = context.bindings.wrdsbManagersJobCodes.job_codes;
 
-    var intranet_its_job_codes = context.bindings.itsJobCodes.job_codes;
+    var intranet_its_location_codes = context.bindings.itsJobCodes.job_codes;
     var intranet_library_job_codes = context.bindings.intranetLibraryJobCodes.job_codes;
     var intranet_trillium_job_codes = context.bindings.intranetTrilliumJobCodes.job_codes;
 
@@ -332,7 +333,7 @@ module.exports = async function (context) {
                         groupKey:       "itinerant-spec-ed@wrdsb.ca"
                     };
                 }
-                if (its_job_codes.includes(job_code)) {
+                if (its_location_codes.includes(location_code)) {
                     if (!members['its-staff']) {
                         members['its-staff'] = {};
                     }

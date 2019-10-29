@@ -177,6 +177,16 @@
             "direction": "in"
         },
         {
+            "name": "itsLocationCodes",
+            "type": "cosmosDB",
+            "databaseName": "igor",
+            "collectionName": "groups-memberships-definitions",
+            "id": "its_location_codes",
+            "partitionKey": "its_location_codes",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
             "name": "procurementQnaJobCodes",
             "type": "cosmosDB",
             "databaseName": "igor",
