@@ -27,6 +27,7 @@ module.exports = async function (context) {
     var itinerant_spec_ed_location_codes = context.bindings.itinerantSpecEdLocationCodes.location_codes;
     var its_job_codes = context.bindings.itsJobCodes.job_codes;
     var its_location_codes = context.bindings.itsLocationCodes.job_codes;
+    var its_staff_managers_job_codes = context.bindings.itsManagerCodes.job_codes;
     var procurement_qna_job_codes = context.bindings.procurementQnaJobCodes.job_codes;
     var psychologists_job_codes = context.bindings.psychologistsJobCodes.job_codes;
     var risk_job_codes = context.bindings.riskJobCodes.job_codes;
@@ -352,6 +353,18 @@ module.exports = async function (context) {
                     members['its-staff'][email] = {
                         email:          email,
                         role:           "MEMBER",
+                        status:         "ACTIVE",
+                        type:           "USER",
+                        groupKey:       'its-staff@wrdsb.ca'
+                    };
+                }
+                if (its_staff_managers_job_codes.includes(job_code)) {
+                    if (!members['its-staff']) {
+                        members['its-staff'] = {};
+                    }
+                    members['its-staff'][email] = {
+                        email:          email,
+                        role:           "MANAGER",
                         status:         "ACTIVE",
                         type:           "USER",
                         groupKey:       'its-staff@wrdsb.ca'
