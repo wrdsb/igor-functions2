@@ -333,6 +333,18 @@ module.exports = async function (context) {
                         groupKey:       "itinerant-spec-ed@wrdsb.ca"
                     };
                 }
+                if (its_job_codes.includes(job_code)) {
+                    if (!members['its-staff']) {
+                        members['its-staff'] = {};
+                    }
+                    members['its-staff'][email] = {
+                        email:          email,
+                        role:           "MEMBER",
+                        status:         "ACTIVE",
+                        type:           "USER",
+                        groupKey:       'its-staff@wrdsb.ca'
+                    };
+                }
                 if (its_location_codes.includes(location_code)) {
                     if (!members['its-staff']) {
                         members['its-staff'] = {};
