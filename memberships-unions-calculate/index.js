@@ -124,6 +124,32 @@ module.exports = async function (context) {
                     };
                 }
 
+                if (cyw_job_codes.includes(job_code) && panel == 'E') {
+                    if (!members['cyw-elementary']) {
+                        members['cyw-elementary'] = {};
+                    }
+                    members['cyw-elementary'][email] = {
+                        email:          email,
+                        role:           "MEMBER",
+                        status:         "ACTIVE",
+                        type:           "USER",
+                        groupKey:       'cyw-elementary@wrdsb.ca'
+                    };
+                }
+
+                if (cyw_job_codes.includes(job_code) && panel == 'S') {
+                    if (!members['cyw-secondary']) {
+                        members['cyw-secondary'] = {};
+                    }
+                    members['cyw-secondary'][email] = {
+                        email:          email,
+                        role:           "MEMBER",
+                        status:         "ACTIVE",
+                        type:           "USER",
+                        groupKey:       'cyw-secondary@wrdsb.ca'
+                    };
+                }
+        
                 //if (dece_group_codes.includes(group_code) && !dece_excluded_job_codes.includes(job_code)) {
                     //if (!members['dece']) {
                         //members['dece'] = {};
