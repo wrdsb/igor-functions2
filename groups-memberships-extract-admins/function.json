@@ -1,0 +1,26 @@
+{
+    "bindings": [
+        {
+            "name": "req",
+            "type": "httpTrigger",
+            "authLevel": "function",
+            "direction": "in",
+            "methods": [
+                "post"
+            ]
+        },
+        {
+            "name": "groupMembershipsNow",
+            "type": "blob",
+            "path": "groups-memberships-actual-now/{group}.json",
+            "connection": "wrdsbigor_STORAGE",
+            "direction": "in"
+        },
+        {
+            "name": "res",
+            "type": "http",
+            "direction": "out"
+        }
+    ],
+    "disabled": false
+}
