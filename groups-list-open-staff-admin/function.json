@@ -1,0 +1,28 @@
+{
+    "bindings": [
+        {
+            "name": "req",
+            "type": "httpTrigger",
+            "authLevel": "function",
+            "direction": "in",
+            "methods": [
+                "post"
+            ]
+        },
+        {
+            "name": "cosmosGroups",
+            "type": "cosmosDB",
+            "databaseName": "igor",
+            "collectionName": "groups-groups",
+            "sqlQuery": "SELECT * FROM c WHERE (c.whoCanViewGroup = 'ALL_IN_DOMAIN_CAN_VIEW' OR c.whoCanViewGroup = 'ANYONE_CAN_VIEW') and (c.staffOwned = true or c.staffManaged = true)",
+            "connectionStringSetting": "wrdsb-igor_CosmosDB",
+            "direction": "in"
+        },
+        {
+            "name": "res",
+            "type": "http",
+            "direction": "out"
+        }
+    ],
+    "disabled": false
+}
