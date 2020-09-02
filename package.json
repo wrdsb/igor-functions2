@@ -11,7 +11,7 @@
     "dependencies": {
         "async": "^2.5.0",
         "azure-storage": "^2.8.1",
-        "googleapis": "^19.0.0",
+        "googleapis": "^59.0.0",
         "google-auth-library": "^0.10.0"
     }
 }
